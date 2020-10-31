@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper,spanish]{book}
+\usepackage[a4paper,left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{natbib}
+\usepackage{multirow}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+%todo---------------------------------
+\usepackage{caption}
+\usepackage{float}
+\usepackage{xargs}                  
+\usepackage{color}
+\usepackage[colorinlistoftodos,prependcaption]{todonotes}
+\newcommandx{\cambiar}[2][1=]{\todo[inline,linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\agregar}[2][1=]{\todo[inline,linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\begin{document}
+
+\listoftodos[Todo-list]
+
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+
+%Empieza la numeración en números romanos
+\frontmatter
+% Incluimos la carátula
+\input{caratula}
+
+
+
+% Incluimos la página de prefacio.
+\input{prefacio}
+
+% Incluimos la página de dedicatorias. Esta página es opcional.
+% Si la página no quiere ser incluida anteponga el símbolo "%" al comienzo de la siguiente línea
+%\input{dedicatoria}
+
+
+% Incluimos la página de agradecimientos. Esta página es opcional.
+% Si la página no quiere ser incluida anteponga el símbolo "%" al comienzo de la siguiente línea
+\input{agradecimiento}
+
+% Incluimos la página de resumen
+\input{resumen}
+
+% Incluimos la página de resumen en inglés
+\input{abstract}
+
+% Tabla de contenido o Indice del contenido
+\tableofcontents{}
+
+% Lista de figuras o Indice de figuras
+\listoffigures
+
+% Lista de tablas o Indice de Tablas
+\listoftables
+
+%Empieza la numeración en números arábigos
+\mainmatter
+\input{Introduccion}
+\input{SistemaElectoral}
+\input{Elecciones}
+\input{Gukena}
+\input{Gukena2}
+\input{cap4}
+\input{conclusion}
+%\input{cap4}
+%...
+\vfill
+\newpage
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
