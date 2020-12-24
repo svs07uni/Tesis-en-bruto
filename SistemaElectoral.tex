@@ -1,26 +1,28 @@
 \label{SistemaElectoral}
-\chapter{Sistema Electoral}
-En el sistema electoral existen partes del proceso vulnerables a la incorporación de recursos informáticos con el objetivo de agilizar su ejecución. Como concepto general, se considera voto electrónico a todo sistema informatizado para el acto de emitir y el recuento de votos en la mesa de votación. Pero además de este sistema existen variadas técnicas implementadas en distintos puntos del país y otros continentes que lograron ejecutarlo o que sólo lograron unos cuantos intentos para finalmente volver al sistema electoral tradicional.\newline
-Se identifican 3 grandes mecanismos:
+\chapter{Tecnología en el Proceso Electoral}
+%\cambiar{Cambiaría el nombre del capítulo Tecnología en Procesos Electorales HECHO}
+
+%\agregar {Descripción del capítulo.    -HECHO}
+Involucrar tecnología en el proceso electoral es complejo, no sólo por sus desafíos técnicos, sino también por su importancia para el Estado y para la sociedad en general. Un sistema de voto electrónico involucra considerar aspectos de software, hardware, procesos operativos, y personas. Por lo tanto, cualquier desarrollo debe tener el aspecto de calidad como el objetivo más importante en el proceso.\newline
+%\agregar{cita a texto del Ministerio - ESTO SALIÓ DEL DOCUMENTO DE CONICET Un sistema de votación debe considerar los siguientes objetivos \cite{conicet}: - HECHO}
+Un sistema de votación debe considerar los siguientes objetivos \cite{conicet}:
 \begin{itemize}
-    \item Los sistemas de recuento automático de votos mediante reconocimiento óptico de marcas aplicadas en la boleta por parte de los ciudadanos.	Los primeros sistemas datan del siglo XIX en Nueva York mediante tarjetas perforadas. En Venezuela (1994 – 2003) implementaron el sistema mediante boletas impresas en papel que luego el elector debía rellenar para luego ser contabilizado mediante reconocimiento óptico de caracteres \cite{eleccionesVenezuela}.\newline
-    \underline{Ventajas:}Mantener el principio de que la voluntad del elector se mantiene en un trozo de papel anónimo fácilmente auditable independiente de los dispositivos y software usados.\newline
-    \underline{Desventajas:}Suponen un doble trabajo para el votante (elegir y además controlar que su elección sea correctamente impresa). Pone en riesgo el anonimato del voto al poder agregar “suciedad” que en realidad codifique información que permita reconstruirse emisión de los votos y la relación de cada votante con su voto.\newline
-    \underline{Conclusión:}Si bien cualquier sistema basado en papel podría ser adulterada, esto debe ser hecho individualmente con cada boleta, y el impacto de una persona corrupta se limita a las boletas bajo su custodia. En el sistema electrónico, en cambio, una única persona corrupta tiene el potencial de influenciar sobre un gran número de máquinas, comprometiendo la integridad de votos en masa, incluyendo los de las mesas cuyos fiscales actúen de buena fe.
-    \item Los sistemas de registro electrónico directo (DRE) – urnas electrónicas. En Brasil, varios estados de EEUU y las últimas elecciones de Venezuela implementaron el sistema la cual realiza simultáneamente el registro y la tabulación del voto mediante un dispositivo informático, operado directamente por el votante (teclado, botonera o teclado táctil), registrándose el voto directamente en la memoria del dispositivo.\newline
-    \underline{Ventajas:}Elimina por completo el uso de papel, no hay boletas que custodiar.\newline
-    \underline{Desventajas:}No permite invalidar un voto o cometer errores clásicos que generan la anulación del voto.\newline
-    \underline{Conclusión:}Genera un punto de tensión entre los ciudadanos que necesitan que el resultado refleje sus elecciones y los encargados de conducirlos que desean terminar la tarea con mayor rapidez y menor esfuerzo delegando la mayor responsabilidad que se pueda por posibles errores o actos de corrupción.
-    \item Los sistemas de votación a distancia a través de Internet o Proyecto Debian es un proyecto comunitario con excelentes resultados de uso. El sistema es robusto, justo y difícil de engañar, pero solo funciona gracias al hecho de que el voto no es secreto.\newline
-    \underline{Desventajas:}Identificar que un votante solo vote una única vez o impedir que vote a nombre de otra persona, o no esté habilitado para votar, a diferencia de verificar los documentos de identidad por parte de autoridades electorales. Por lo tanto, estos sistemas obligan a que la máquina que recibe el voto tenga conocimiento de quien lo está emitiendo, generando un punto de ataque para quien quiera violar el secreto del voto.
+    \item Garantizar la completitud en la oferta electoral
+    \item Simplificar el uso de boletas (por ej. con una boleta única)
+    \item Brindar mayor accesibilidad a los ciudadanos a la hora de votar (por ej. para personas con alguna discapacidad)
+    \item Lograr precisión y rapidez en el proceso de conteo de votos
 \end{itemize}
+Además un sistema de votación que incorpore algún grado de automatización debe construir la confianza de los ciudadanos, partidos políticos y gobierno, en el sistema y en el proceso de votación \cite{conicet}.
+
+Una de las ventajas más deseadas en automatizar el proceso es la rapidez en el conteo. Si todo sale bien los resultados pueden ser inmediatos pero el problema es el impacto que puede generar las distintas cosas que pueden salir mal. La rapidez sin confianza ni seguridad no es útil para todo proceso electoral y por esto es que la eficacia debe importar por sobre la eficiencia o rapidez.
 
 \section{Sistema electoral}
 
 Un sistema electoral consiste de reglas y procedimientos técnicos que producen determinadas consecuencias, es decir, los sistemas electorales no son neutros. 
 La complejidad es afectada por la cantidad de representantes que se eligen por distrito electoral y la forma de votación. El voto se realiza a través de las boletas electorales, las cuales son el instrumento por el cual el ciudadano expresa su voluntad, además de ser la prueba real del voto y el medio para realizar el recuento de votos o escrutinio.
 Actualmente las condiciones jurídicas del sufragio están constituidas por su universalidad, igualdad, obligatoriedad y secreto. Sin embargo, en Argentina para llegar a ese punto, los condicionamientos y las formas de votar fueron modificándose a través de la historia \cite{historia}.\newline
-Desde 1873 que el voto oral se convirtió en un voto escrito, fue modificandose hasta conseguir que en 1995, por la reforma de la Constitución Nacional queda hasta el día de la fecha el régimen electoral como el siguiente:
+
+Desde 1873 que el voto oral se convirtió en un voto escrito, fue modificándose hasta conseguir que en 1995, por la reforma de la Constitución Nacional queda hasta el día de la fecha el régimen electoral como el siguiente:
 \begin{itemize}
     \item Sistema de Representación Proporcional
     \item Método de Conversión de votos en escaños: Sistema D'Hondt
@@ -28,119 +30,142 @@ Desde 1873 que el voto oral se convirtió en un voto escrito, fue modificandose 
     \item La elección de todos los representantes argentinos se eligen en forma directa por el pueblo de la Nación Argentina.
 \end{itemize}
 \newline
-El desarrollo de un sistema de votación electrónica es complejo, no sólo por sus desafíos técnicos, sino también por su importancia para el Estado y para la sociedad en general. Un sistema de voto electrónico involucra la consideración de aspectos de software, hardware, procesos operativos, y personas. En este sentido, cualquier desarrollo debe tener el aspecto de calidad del sistema como un objetivo primordial en el proceso.\newline
-Según el Ministerio del Interior, Obras Públicas y Vivienda, se plantearon objetivos que un sistema de votación debe considerar:
+
+
+
+
+
+\subsection{Clasificación de Sistemas de Voto Electrónico}
+%\cambiar{En el sistema electoral existen partes del proceso vulnerables a la incorporación de recursos informáticos con el objetivo de agilizar su ejecución. Como concepto general, se considera voto electrónico a todo sistema electoral que agregue tecnología a las fases de emisión y recuento de votos de la mesa de votación. Hay experiencias de implementación de voto electrónico distintos puntos del país y en otros países, utilizando variadas técnicas y con diferentes niveles de aceptación.  En algunos casos se logró la implantación de el voto electrónico y en otros luego de unos cuantos intentos se volvió al sistema electoral tradicional.\newline Se identifican 3 grandes mecanismos:  - HECHO}
+
+
+En el sistema electoral existen partes del proceso vulnerables a la incorporación de recursos informáticos con el objetivo de agilizar su ejecución. Como concepto general, se considera voto electrónico a todo sistema electoral que incorpore tecnología en las fases de emisión y durante el recuento de votos de la mesa de votación. Experiencias de implementación de voto electrónico en distintos puntos del país y en otros países utilizaron variadas técnicas con distintos impactos de aceptación o rechazo logrando unos cuantos intentos para finalmente volver al sistema electoral tradicional.\newline
+Se identifican 3 grandes mecanismos:
 \begin{itemize}
-    \item Garantizar la completitud en la oferta electoral
-    \item Simplificar el uso de boletas (por ej. con una boleta única)
-    \item Brindar mayor accesibilidad a los ciudadanos a la hora de votar (por ej. para personas con alguna discapacidad)
-    \item Lograr precisión y rapidez en el proceso de conteo de votos
+    \item Los sistemas de recuento automático de votos mediante reconocimiento óptico de marcas aplicadas en la boleta por parte de los ciudadanos.	Los primeros sistemas datan del siglo XIX en Nueva York mediante tarjetas perforadas. En Venezuela (1994 – 2003) implementaron el sistema mediante boletas impresas en papel que luego el elector debía rellenar para luego ser contabilizado mediante reconocimiento óptico de caracteres \cite{eleccionesVenezuela}.\newline
+    \underline{Ventajas:} Mantener el principio de que la voluntad del elector se mantiene en un trozo de papel anónimo fácilmente auditable independiente de los dispositivos y software usados.\newline
+    \underline{Desventajas:} Suponen un doble trabajo para el votante (elegir y además controlar que su elección sea correctamente impresa). Pone en riesgo el anonimato del voto al poder agregar “suciedad” que en realidad codifique información que permita reconstruirse emisión de los votos y la relación de cada votante con su voto.\newline
+    \underline{Conclusión:} Si bien cualquier sistema basado en papel podría ser adulterado, esto debe ser hecho individualmente con cada boleta, y el impacto de una persona corrupta se limita a las boletas bajo su custodia. En el sistema electrónico, en cambio, una única persona corrupta tiene el potencial de influenciar sobre un gran número de máquinas, comprometiendo la integridad de votos en masa, incluyendo los de las mesas cuyos fiscales actúen de buena fe.
+    \item Los sistemas de registro electrónico directo (DRE) – urnas electrónicas. En Brasil, varios estados de EEUU y las últimas elecciones de Venezuela implementaron el sistema la cual realiza simultáneamente el registro y la tabulación del voto mediante un dispositivo informático, operado directamente por el votante (teclado, botonera o teclado táctil), registrándose el voto directamente en la memoria del dispositivo.\newline
+    \underline{Ventajas:} Elimina por completo el uso de papel, no hay boletas que custodiar.\newline
+    \underline{Desventajas:} No permite invalidar un voto o cometer errores clásicos que generan la anulación del voto.\newline
+    \underline{Conclusión:} Genera un punto de tensión entre los ciudadanos que necesitan que el resultado refleje sus elecciones y los encargados de conducirlos que desean terminar la tarea con mayor rapidez y menor esfuerzo delegando la mayor responsabilidad que se pueda por posibles errores o actos de corrupción.
+    \item Los sistemas de votación a distancia a través de Internet o Proyecto Debian es un proyecto comunitario con excelentes resultados de uso. El sistema es robusto, justo y difícil de engañar, pero solo funciona gracias al hecho de que el voto no es secreto.\newline
+    \underline{Desventajas:} Identificar que un votante solo vote una única vez o impedir que vote a nombre de otra persona, o no esté habilitado para votar, a diferencia de verificar los documentos de identidad por parte de autoridades electorales. Por lo tanto, estos sistemas obligan a que la máquina que recibe el voto tenga conocimiento de quien lo está emitiendo, generando un punto de ataque para quien quiera violar el secreto del voto.
 \end{itemize}
-Además un sistema de votación que incorpore algún grado de automatización debe construir la confianza de los ciudadanos, partidos políticos y gobierno, en el sistema y en el proceso de votación.\newline
-A partir de las partes involucradas en el proceso surgen distintas propiedades a satisfacer:
+
+
+\section{Propiedades de Calidad}
+Para lograr un sistema electoral exitoso y confiable a la vista de las partes involucradas es necesario que cumpla ciertas propiedades de calidad, sin tener en cuenta si este proceso incluye tecnología o no. A continuación se enumeran estas propiedades que todo sistema electoral debe satisfacer.
+%\agregar{Párrafo marco sobre Atributos de Calidad - HECHO?}
+%\cambiar{A partir de las partes involucradas en el proceso surgen distintas propiedades a satisfacer un sistema electoral con o sin tecnología, que se describen a continuación. - HECHO}
+
 
 \subsection{Secreto del voto}
 Únicamente el votante debe poder tener conocimiento alguno del contenido del voto. La sola sospecha de que alguien pueda conocer el contenido de su voto impide la libre emisión del sufragio.
-A pesar de eliminar el voto en cadena al utilizar urnas electrónicas, en el estado de Ohio se descubrió dos años después de haberlas usado, una grave falencia en estas urnas que permite reconstruir el vinculo entre el voto y el votante, a través de un reporte emitido por la urna al final del recuento.
+%\cambiar{Una experiencia de implementación de urna electrónicas en el estado de Ohio, EEUU ** año y cita ***** que vulneró el secreto del voto,  dos años después de haberlas usado, se descubrió que el sistema permitía reconstruir el vinculo entre el voto y el votante, a través de un reporte emitido por la urna al final del recuento - NO TENGO FECHA 2007 \url{https://en.wikipedia.org/wiki/Electronic_voting_in_the_United_States#Ohio}  \url{https://nordicinnovationlabs.com/wp-content/uploads/2018/07/everest.pdf} - HECHO}
+Una experiencia de implementación de urna electrónica en el estado de Ohio, EEUU el 2007 que permitió eliminar el voto en cadena pero, se descubrió dos años después de haberlas usado, una falla grave en estas urnas que permitía reconstruir el vinculo entre el voto y el votante, a través de un reporte emitido por la urna al final del recuento \cite{mcdaniel2007everest}.
 
 \subsection{Integridad}
-Requiere garantizar que la cadena de confianza no puede romperse. Esta propiedad también se encuentra ligada a la seguridad del sistema para proteger datos e información de accesos no autorizados, pero proveyendo al mismo tiempo acceso a personal autorizado para operar. En particular, se consideran importantes las propiedades de confidencialidad, integridad, disponibilidad y autenticidad. Los aspectos de Seguridad Informática cobran gran importancia en un sistema de misión crítica, un error en el sistema que pueda ser explotado por un atacante podría atentar contra alguno de los principios básicos del voto o el resultado de la votación en general. Frente a esto tenemos el ejemplo de las elecciones en Holanda que luego de 9 años un grupo de activistas demostró en un programa de televisión las vulnerabilidades del sistema. Esto generó que el gobierno decidiera volver al sistema tradicional en papel \cite{eleccionesHolanda}. Otro ejemplo serian las elecciones como las de EEUU en 2004, en las que las diferencias entre las encuestas en boca de urna y los resultados finales sugieren fuertemente que las urnas dieron resultados incorrectos.\newline
+%\agregar{Al caso de Holanda citar años - HECHO}
+Requiere garantizar que la cadena de confianza no puede romperse. Esta propiedad también se encuentra ligada a la seguridad del sistema para proteger datos e información de accesos no autorizados, pero proveyendo al mismo tiempo acceso a personal autorizado para operar. En particular, se consideran importantes las propiedades de confidencialidad, integridad, disponibilidad y autenticidad. Los aspectos de Seguridad Informática cobran gran importancia en un sistema de misión crítica, un error en el sistema que pueda ser explotado por un atacante podría atentar contra alguno de los principios básicos del voto o el resultado de la votación en general. Frente a esto tenemos el ejemplo de las elecciones en Holanda que a partir de 1997 se votaba con el sistema fabricado por la empresa Nedap, luego de 9 años un grupo de activistas demostró en un programa de televisión las vulnerabilidades del sistema. Esto generó que el gobierno decidiera volver al sistema tradicional en papel \cite{eleccionesHolanda}. Otro ejemplo serian las elecciones como las de EEUU en 2004, en las que las diferencias entre las encuestas en boca de urna y los resultados finales sugieren fuertemente que las urnas dieron resultados incorrectos.\newline
 Esta propiedad incluye capturar la intención del voto de manera fehaciente (y sin introducir sesgos), registrar la intención de voto exactamente como fue capturada, garantizando que se respeta la voluntad de cada votante, es decir que el sistema no permita cambiar el voto una vez que el votante lo emitió, y contabilizar el voto exactamente como fue registrado. Si el sistema, por error o ataque, altera la suma de los votos individuales lo hará de una forma que será evidente para los ciudadanos.
 
 \subsection{Capacidad de auditoría y control del proceso electoral (sin afectar los atributos de secreto e integridad anteriores)}
-Capacidad de monitorear el sistema tanto en su diseño (estructura), como cuando se encuentra en funcionamiento (ejecución) y cuando ya dejó de utilizarse (análisis post-hoc). Un sistema de votación debe poderse auditar todos los niveles de hardware y software. El principio rector es que "las elecciones deben dar una evidencia consistente de un resultado preciso, aún cuando el rival sea quien escribe el software, administra la elección o gobierna el país".\newline
-En el sistema de votación tradicional, la responsabilidad de auditoría está distribuida en todos porque todos pueden ver y entender el sistema. Lejos de aportar transparencia, la urna electrónica obstaculiza la capacidad de la mayoría de los ciudadanos de fiscalizar la elección, ya que queda necesariamente en manos de una élite tecnológica a la que el resto de la población no le queda otra que creerle. Las elecciones como las de EEUU en Georgia específicamente, en las que las elecciones fueron cien por ciento electrónicas y con el mismo tipo de máquinas. Esto quiere decir que gran parte de los votos no tiene recuento posible ya que no existe comprobante físico para contabilizar \cite{eleccionesGeorgia}.\newline
+Capacidad de monitorear el sistema tanto en su diseño (estructura), como cuando se encuentra en funcionamiento (ejecución) y cuando ya dejó de utilizarse (análisis post-hoc). Un sistema de votación debe poderse auditar en todos los niveles de hardware y software. El principio rector es que ``las elecciones deben dar una evidencia consistente de un resultado preciso, aún cuando el rival sea quien escribe el software, administra la elección o gobierna el país''.\newline
+En el sistema de votación tradicional, la responsabilidad de auditoría está distribuida en todos porque todos pueden ver y entender el sistema. Lejos de aportar transparencia, la urna electrónica obstaculiza la capacidad de la mayoría de los ciudadanos de fiscalizar la elección, ya que queda necesariamente en manos de una élite tecnológica a la que el resto de la población no le queda otra que creerle.
+%\cambiar{Este fue el caso de las de Georgia EEUU **citar año**, en las que las elecciones fueron cien por ciento electrónicas y con el mismo tipo de máquinas. Esto quiere decir que gran parte de los votos no tiene recuento posible ya que no existe comprobante físico para contabilizar \cite{eleccionesGeorgia}.\newline - HECHO}
+
+Este fue el caso del estado de Georgia en EEUU que a partir del 2002 hasta el 2019 las elecciones fueron cien por ciento electrónicas y con el mismo tipo de máquinas. Esto quiere decir que gran parte de los votos no tiene recuento posible ya que no existe comprobante físico para contabilizar \cite{eleccionesGeorgia}.\newline
 La incorporación de urnas electrónicas tiene efectos contrarios a este objetivo ya que las personas con poca afinidad con los sistemas computacionales (adultos mayores, personas de escasos recursos, con dificultad visual, entre otras) se verán enfrentados a un sistema mucho más complejo para votar. Por otra parte, las personas que auditan las elecciones (maestras de escuela, empleados públicos, fiscales de partidos políticos) se verán incapaces de auditar eficazmente este tipo de sistema. Sólo un grupo reducido de personas relacionadas al área de sistemas computacionales comprenderán el funcionamiento de estos sistemas, pero dificilmente se atreverán a firmar a conciencia una certificación de seguridad de las urnas pues no existe método formal de validación que los avale. Si bien no existen sistemas perfectos, la diferencia de impacto es sustancial. Un error mínimo en un sistema de votación electrónica puede alterar el resultado de una elección simultáneamente en un gran número de mesas.
 
+%\cambiar{Agregué la imagen de las elecciones de neuquén - HECHO}
+%\cambiar{Mover todas las imágenes a la carpeta img -HECHO}
 \subsection{Igualdad de condiciones para todos los partidos políticos}
-Todo sistema electrónico tiene un límite técnico donde manipular o visualizar la oferta electoral. Como ejemplo tenemos las elecciones del 2019 que se llevaron a cabo en Neuquén y Plottier para los comicios municipales. En estas elecciones se debieron distribuir 29 listas en una pantalla con capacidad de 18 casilleros. Lograr distribuir la totalidad de las listas implicó que no exista ventaja entre candidatos por las maniobras de mercantilizar la herramienta de las colectoras \cite{limiteColectoras}.
+Todo sistema electrónico tiene un límite técnico donde manipular o visualizar la oferta electoral. Como ejemplo tenemos las elecciones del 2019 que se llevaron a cabo en Neuquén y Plottier para los comicios municipales (como muestra la Figura \ref{graf:buenqn}). En el caso de Plottier se debieron distribuir 29 listas en una pantalla con capacidad de 18 casilleros. Lograr distribuir la totalidad de las listas implicó que no exista ventaja entre candidatos por las maniobras de mercantilizar la herramienta de las colectoras \cite{limiteColectoras}.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=\textwidth]{img/buenqn2019.png}
+    \end{center}
+  \caption{Pantalla del sistema BUE utilizado en las Elecciones Municipales de Neuquen 2019}
+  \label{graf:buenqn}
+\end{figure}
 
 \subsection{Universalidad}
 El sistema debe estar preparado para facilitar el sufragio de toda persona habilitada, esto incluye personas con requerimientos de accesibilidad, por ej. no videntes. Debemos tener en cuenta que toda persona posee los mismos derechos sobre el voto. Por lo tanto, si se requiere el acompañamiento debido a la complejidad o inaccesibilidad del sistema no se está alcanzando ninguna ventaja por sobre el sistema electoral tradicional.\newline
 Como ejemplo, las máquinas usadas en elecciones electrónicas en general se basan en fotos y colores como medio de accesibilidad para las personas que no puedan leer o con baja visión. Por otro lado, en varios paises es común la instalación de un kit accesible como un teclado especial y auriculares para personas invidentes.
 
-\subsection{Convalidación: análisis post-hoc del proceso electoral}
-Una de las mayores ventajas es la rapidez en el conteo. De hecho, cuando todo sale bien, los resultados pueden ser inmediatos. El problema surge cuanto evaluamos el impacto potencial de las distintas cosas que pueden salir mal.\newline
-La rapidez, sin confianza ni seguridad, no sirve para muchos en un proceso electoral. Esta es un área en la que la eficacia debe primar por sobre la eficiencia (rapidez).
-
 \subsection{Usabilidad}
-Debe ser fácil y adecuado para toda persona involucrada en el sistema, y cómo resulta el tipo de soporte brindado a sus usuarios. Un sistema electrónico debe ser fácil de aprender tanto para un votante como para las autoridades encargadas de dar soporte. Esta propiedad también ayuda al objetivo de rapidez ya que un sistema dificil de entender generará largas colas de espera para votar debido a que varias personas les lleva más tiempo entender y generar su sufragio. Al igual ocurriría con el tiempo de tardanza para el escrutinio.
+%\cambiar{El sistema debe ser fácil y adecuado para toda persona involucrada en el proceso de la elección. Un sistema electrónico debe ser fácil de aprender tanto para un votante como para las autoridades encargadas de dar soporte. Esta propiedad también ayuda al objetivo de rapidez, ya que un sistema difícil de entender generará largas colas de espera para votar debido a que varias personas les lleva más tiempo entender y generar su sufragio. Así mismo la facilidad de uso mejoraría los tiempos del escrutinio realizado por las autoridades de mesa. - HECHO}
+
+El sistema debe ser fácil y adecuado para cualquier persona involucrada en el proceso de la elección. Un sistema electrónico debe ser fácil de aprender tanto para un votante como para las autoridades encargadas de dar soporte. Esta propiedad también ayuda al objetivo de rapidez ya que un sistema difícil de entender generará largas colas de espera para votar debido a que varias personas les lleva más tiempo entender y generar su sufragio. De igual manera la facilidad de uso mejoraría los tiempos del escrutinio realizado por cada autoridad de mesa.
 
 \subsection{Cumplir con las normativas vigentes del proceso electoral}
-Un sistema electoral regularmente no modifica sus políticas o reglas que lo conforman. De todos modos, un sistema de votación electrónica debe ser capaz de adaptarse a cualquier cambio adoptado por las autoridades de un pais, provincia o distrito.
+Un sistema electoral regularmente no modifica sus políticas o reglas que lo conforman. De todos modos, un sistema de votación electrónica debe ser capaz de adaptarse a cualquier cambio adoptado por las autoridades de un país, provincia o distrito.
 
 \subsection{Integridad vs. Auditabilidad vs. Secreto}
-Cabe destacar que para sistemas de votación (sea en formato de papel o electrónicos), se ha demostrado formalmente que existe una tensión o compromiso entre los atributos de integridad, auditabilidad y privacidad, y que existe una imposibilidad de satisfacer perfectamente los tres atributos en forma simultánea.\newline
-Cualquier sistema de emisión electrónica de voto que busque solucionar los problemas inherentes a garantizar integridad y secreto, necesariamente será dificil de verificar formalmente y de auditar, incluso por expertos en la disciplina.
+%\agregar{Agregar cita - HECHO}
+En todo sistema electoral (sea en formato de papel o electrónico) se ha demostrado que satisfacer los atributos de integridad, auditabilidad y secreto simultáneamente es complejo y es una tarea imposible de cumplir. Cualquier sistema de voto electrónico que intente solucionar los problemas inherentes a garantizar integridad y secreto, estará en una situación difícil para lograr una verificación formal y en auditabilidad. \cite{conicet}
 
 \section{Modelo de Referencia}
-El problema de la votación se puede determinar en cinco fases secuenciales del proceso susceptible de ser automatizada. Las fases están derivadas del Código Electoral Nacional (Decreto nº2135, 1983)
-\begin{enumerate}
-    \item Emisión del voto
-    \item Escrutinio de la mesa
-    \item Generación de Documentos
-    \item Comunicación de Resultados
-    \item Procesamiento de Resultados y Publicación
-\end{enumerate}
+Mediante el análisis realizado por el Conicet \cite{conicet}, el problema de la votación se puede determinar en cinco fases secuenciales del proceso susceptibles de ser automatizada (Figura \ref{graf:modeloReferencia}) . Las fases están derivadas del Código Electoral Nacional (Decreto nº2135, 1983) \cite{decreto}
+%\agregar{cita al Decreto}
+%\agregar{artículo del CONICET - HECHO}
 
-Como evaluación se analizan los riesgos y factibilidad técnica de las cuatro primeras fases, considerando distintas fuentes de información: atributos de calidad, los principios de construcción, los antecedentes de otros países, y la experiencia de los miembros de la Comisión.\newline
-Se despliega considerando la fase menos riesgosa de implementar en el corto plazo, continuando progresivamente hasta llegar a la fase inicial considerada la más riesgosa y que por lo tanto requiere esfuerzos a largo plazo.
-\subsection{Comunicación de Resultados} Asumiendo que se cuenta con un telegrama de escrutinio firmado (al menos) por la autoridad de mesa. A fin de evitar demoras en la transmisión de telegramas, es factible realizar su digitalización y transmisión desde el mismo local de votación (Sistema usado en las PASO). Desde el punto de vista de confiabilidad y verificabilidad del sistema, estos atributos aumentan si se transmite la imagen del documento, además de la información contenida en el soporte digital. De esta manera, si se publica tanto el resultado como la imagen del telegrama, cualquier ciudadano podrá contrastar la información y detectar posibles inconsistencias entre lo impreso y lo digital.\newline
-    Disponer de un soporte digital en el documento evita la carga manual de los datos en el centro de procesamiento. Además, al recibirse la imagen del telegrama y los datos en formato digital, el resultado de la mesa puede ser publicado directamente sin intervención humana. Sin embargo, esta opción debe evaluarse con mucho cuidado, si la integridad de los datos fue afectada (es decir, el formato digital no coincide con lo impreso) o se dan otras situaciones anómalas (por ej. el telegrama no está firmado por la autoridad de mesa, o no se distinguen los números impresos) la confiabilidad del sistema puede verse afectada. Una solución de compromiso al problema descrito puede alcanzarse incorporando un proceso de validación de los datos.
-\subsection{Generación de Documentos} Según el modelo de referencia, esta etapa comienza una vez que se dispone del resultado del escrutinio en la mesa. Al finalizar, se cuenta con actas de escrutinio, certificados de escrutinio y telegrama de escrutinio, todos estos firmados por autoridades de mesa. La incorporación de tecnología es factible, pudiendo realizar aportes en el desempeño de la generación de documentos y en una mayor oportunidad de verificación (o fiscalización) por parte de los partidos políticos. Aunque se observan riesgos asociados a la integridad de los documentos, ya que los formatos impresos pueden no coincidir con los formatos digitales, y la detección de estas diferencias puede darse luego de que se haya publicado el resultado provisorio de la mesa. Este tipo de riesgo no es fácil de mitigar, aunque no afectaría el resultado del escrutinio definitivo. También existen ciertos riesgos respecto a la disponibilidad del sistema.\newline
-    Peligros identificados en relación al hardware (Máquina de generación de documentos):
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=\textwidth]{img/modeloReferencia.png}
+    \end{center}
+  \caption{Modelo de Referencia}
+  \label{graf:modeloReferencia}
+\end{figure}
+
+%\agregar{Agregar imágen del modelo de referencia - HECHO}
+%\cambiar{Está muy textual del artículo del CONICET (Modelo de Referencia, Comunicación de los resultados...., Conteo, Costo en tecnología),  Hay que parafrasear. Sacar la experiencia de los miembros de la Comisión - HECHO}
+A continuación se analizan los riesgos y factibilidad técnica de las cuatro primeras fases del modelo de referencia teniendo en cuenta distintas fuentes de información, como son los atributos de calidad y antecedentes de otros países que se analizaron con anterioridad. Se desarrollará este análisis partiendo de la fase menos riesgosa de implementar tecnología, continuando progresivamente hasta llegar a la fase inicial, la cual se considera la fase más riesgosa y que requiere mayor esfuerzo a largo plazo.
+
+%\cambiar{el orden de las subsecciones por el orden cronológico - HECHO:  el orden es por riesgo}
+
+\subsection{Comunicación de Resultados} 
+La fase de Comunicación de Resultados implica la transmisión de datos desde el lugar de votación hacia el centro de cómputos. Sabiendo que en un sistema de votación cada autoridad de mesa cuenta con un telegrama de escrutinio firmado correspondiente a su mesa, por lo tanto, reducir demoras en la transmisión de estos telegramas es viable realizar su digitalización y transmisión desde el mismo lugar de votación. Un ejemplo a esta situación fue el sistema usado en las PASO el año 2019 en Argentina, este sistema digitalizó y transmitió este telegrama completado y firmado por los representantes de la mesa correspondiente \footnote{https://www.infobae.com/politica/2019/07/20/como-es-el-nuevo-sistema-de-transmision-de-datos-que-debutara-en-las-paso/}.
+%\agregar{año de la elección 2019, y alguna cita que mencione el proceso puede ser una noticia - HECHO} 
+Esta transmisión incrementa las propiedades de confiabilidad y verificabilidad del sistema si se transmite tanto la imagen del telegrama como la información contenida. De tal manera, cualquier ciudadano podrá contrastar la información digital con la imagen del telegrama y poder así determinar si existen inconsistencias entre lo impreso y lo digital.
+
+Contar con un soporte digital del telegrama evita la carga centralizada y manual de los datos en el centro de proceamiento. Otra ventaja de contar con la imagen del telegrama y la información digital es que el resultado de la mesa se podría publicar directamente sin necesidad de ninguna intervención humana. Por supuesto, esta situación ideal requiere una evaluación más cuidadosa, ya que está en juego la integridad de los datos, por lo tanto, si esta integridad fue manipulada y los datos digitales no coinciden con lo impreso o cualquier otra situación anómala (por ejemplo la falta de firmas en el telegrama, o números impresos difíciles de distinguir) pondrá en duda la confiabilidad del sistema. Como alternativa a esta situación es útil incorporar un proceso de validación de los datos.
+
+\subsection{Generación de Documentos} 
+La fase de Generación de Documentos inicia al momento que se dispone con el resultado del escrutinio de la mesa y finaliza con las actas, certificados y telegramas de escrutinio, todos estos firmados por las autoridades de mesa. En esta etapa es viable incorporar tecnología ya que puede mejorar el desempeño de la generación de estos documentos y en la verificación por parte de los partidos políticos. 
+Sin embargo, puede afectar a la integridad de los documentos, los formatos impresos pueden no coincidir con los datos digitales y su detección puede ocurrir luego que se publicaron los resultados provisorios de la mesa. Este riesgo no es fácil de evitar aunque no afectaría al resultado del escrutinio definitivo. 
+Con respecto al hardware, es decir la máquina encargada de generar los documentos puede presentar problemas como no estar operativa, no puede generar o imprimir los documentos o no puede enviar los documentos electrónicos. Otro de los problemas que puede incorporar es la alteración de los documentos electrónicos en tránsito.
+
+Como se puede ver, los riesgos están relacionados al mecanismo de transmisión, por lo tanto no requiere un control de seguridad tan estricto como las fases anteriores del modelo de referencia. Relacionado al aspecto técnico del hardware se debería considerar que la máquina no posea puertos de comunicación cableado o inalámbricos accesibles externamente y debería existir una separación física entre la memoria de datos y la memoria de instrucciones de proceso. 
+
+\subsection{Conteo} 
+La fase de Conteo consiste en totalizar los datos por categoría y partido político. Este proceso necesita que cada autoridad de mesa realice el recuento independiente y auditado para finalizar en una o más actas con la misma información de la totalización. Incorporar tecnología en esta fase deberá ser para asistir en el conteo y que su resultado sea una primera aproximación. Sin embargo, el resultado final deberá ser plasmado en las actas con el dato obtenido por conteo manual y así cumplir el principio de independencia del software. Este conteo computarizado ayuda a las autoridades de mesa a tener aumentar su confianza en el resultado del conteo si coincide la cuenta manual con la cuenta electrónica, de todos modos se debe obligar a hacer el conteo manual y colocar toda la confianza en la tecnología.
+Con respecto al hardware, o sea, la máquina encargada del conteo de votos tenemos los riesgos de que la máquina no se encuentre operativa o que sea manipulada para cambiar tu comportamiento o que sea dañarla completamente. Teniendo en cuenta estos problemas se debe tomar algunos recaudos a nivel hardware:
+
     \begin{itemize}
-        \item Alteración de documentos electrónicos en tránsito.
-        \item La máquina no está operativa.
-        \item La máquina no puede generar o imprimir los documentos.
-        \item No es posible enviar los documentos electrónicos.
-    \end{itemize}
-    En esta etapa los riesgos inherentes están relacionados con el mecanismo de transmisión, por ello las máquinas que transfieren los documentos electrónicos no están sujetas a restriciones de seguridad tan estrictas como en las etapas anteriores.
-    A partir de esto, se deben tener en cuenta aspectos técnicos mínimos que deberían ser considerados respecto del hardware para un dispositivo de conteo de votos.
-    \begin{itemize}
-        \item La máquina no debería poseer puertos de comunicación cableado o inalámbricos accesibles desde el exterior de la carcasa.
-        \item La máquina debe contar con separación física entre memoria de datos y memoria de instrucciones de proceso.
-     \end{itemize}  
-        
-\subsection{Conteo} Fase donde se totalizan los resultados por categoría y partido político, siendo el presidente de mesa el único encargado de realizar esta totalización. El circuito electoral requiere que cada mesa realice un recuento independiente y auditado que será plasmado en una o más actas con la misma información. En esta fase la computadora deberá ser un asistente en el conteo y que su resultado sea tomado como una primera aproximación. El resultado final plasmado en las actas será el obtenido por el conteo manual realizado por el presidente de mesa. De esta forma, se tiene un mecanismo robusto de conteo que es compatible con el principio de independencia del software. El conteo electrónico ayuda a las autoridades de mesa a generar confianza en el resultado del conteo, siempre y cuando se asegure el principio de independencia de software, esto es, la verificación efectiva de que la cuenta manual coincide con la cuenta electrónica, ya sea obligando a hacer el conteo manual o realizando risk limiting audits a posteriori.\newline
-    Peligros identificados en relación al hardware (Máquina de Conteo de votos):
-    \begin{itemize}
-        \item La máquina no está operativa.
-        \item La máquina es manipulada para cambiar su comportamiento o dañarla irreversiblemente.
-    \end{itemize}
-    A partir de esto, se deben tener en cuenta aspectos técnicos mínimos que deberían ser considerados respecto del hardware para un dispositivo de conteo de votos.
-    \begin{itemize}
-        \item La máquina no debería poseer puertos de comunicación cableado o inalámbricos accesibles desde el exterior de la carcasa.
-        \item Filtrar toda conexión a la red eléctrica para evitar comunicaciones PLC. Se prefiere operación a baterías.
-        \item La máquina debe contar con mecanismos de seguridad para evitar la descarga de datos que no contengan firma digital autorizada.
-        \item La máquina debe contar con separación física entre memoria de datos y memoria de instrucciones de proceso.
-        \item El fabricante de la MEB debe ser diferente al fabricante de la máquina de conteo de votos.
-        \item Otro items más que se pueden encontrar en \cite{conicet}
+        \item No poseer comunicación cableada o inalámbrica accesibles externamente.
+        \item Preferiblemente usar baterías para evitar posibles comunicaciones PLC a través de la conexión a la red eléctrica.
+        \item Mecanismos de seguridad evitando toda descarga de datos no autorizada.
+        \item Separación física entre memoria de datos y memoria de instrucciones de proceso.
+        \item Otros items más que se pueden encontrar en el artículo de Conicet \cite{conicet}
     \end{itemize}
 \subsection{Emisión del Voto} 
-Fase en la que el ciudadano habilitado para votar expresa y registra su intención de voto. Cuando un dispositivo electrónico intermedia entre el votante y el registro de su intención de voto, el sistema electoral incluye un sistema electrónico para la emisión del voto, lo que popularmente se llama "voto electrónico". Los atributos de calidad referidos a un sistema de emisión de voto son: universalidad del voto, garantías de la oferta electoral, integridad (con sus 3 aspectos), confidencialidad, y usabilidad. La dificultad técnica, y que distingue al proceso de votación de otros sistemas informáticos, es que el requerimiento de mantener el secreto (un voto no puede ser asociado a su emisor) imposibilita luego explicar si un voto fue emitido válidamente por un votante o el mismo es consecuencia de un mal funcionamiento del software. Un sistema para la emisión del voto implica un alto riesgo, ya que está expuesto a todos los votantes habilitados, las autoridades de mesa y todo el sistema logístico del acto electoral. En una elección de escala nacional o incluso provincial, es un sistema distribuido de misión crítica en el que una falla (en todos o en un gran número de "nodos") puede ser catastrófica. Se debe considerar también que los problemas o errores que puedan introducirse en esta fase (detectables o no) se pueden propagar a las siguientes fases del modelo, y esto eleva el nivel de riesgo de todo el sistema.\newline
+En la fase de Emisión del Voto, como su nombre indica, el votante expresa y registra su intención de voto. Cuando existe un dispositivo electrónico como intermediario entre el votante y su intención de voto se denomina al sistema como ``voto electrónico''. Esta fase incluye los atributos de calidad de universalidad del voto, igualdad de condiciones para la oferta electoral, integridad, secreto del voto y usabilidad descritas en el capítulo 2. Como se detalló en este capítulo, la limitación técnica del ``voto electrónico'' es el requerimiento de mantener la confidencialidad del emisor del voto sin afectar la posibilidad de verificar si un voto fue emitido válidamente por un ciudadano habilitado o el voto registrado es consecuencia de un mal funcionamiento del sistema. Integrar tecnología en esta fase involucra un alto riesgo, un sistema distribuido de misión crítica es sumamente vulnerable a que una falla en un conjunto o todos los componentes que lo integran produzca un impacto general a todo el proceso electoral. Además una falla en esta fase (detectable o no) se puede propagar fácilmente a las siguientes fases del proceso electoral descritas en el modelo de referencia. 
 
-Peligros identificados en relación al hardware:
-    \begin{itemize}
-        \item La máquina emisora de boletas (MEB) se daña y no puede brindar servicio.
-        \item La MEB es manipulada electrónicamente para modificar la representación del voto.
-        \item La MEB es manipulada para almacenar y/o transmitir información adicional sobre la interacción del votante con la misma, que pueda ser utilizada posteriormente para asociar al elector con su voto.
-        \item La MEB es manipulada para sesgar el modo de presentación de la oferta electoral.
-        \item La MEB es reemplazada por hardware ilegítimo no distinguible por los usuarios.
-    \end{itemize}
-    Debido a esto, un hardware debe tener un diseño y construcción robusta, debiendo resistir manipulaciones maliciosas y vandalismo. \newline
-    A partir de esto, se deben tener en cuenta aspectos técnicos mínimos que deberían ser considerados respecto del hardware para un dispositivo de emisión de votos.
-    \begin{itemize}
-        \item No debe tener capacidad de almacenamiento estático (disco rígido, SSD, etc.)
-        \item El software debe ser de acción mínima y almacenable en Read Only Memory - One Time Programmable.
-        \item Los componentes deben ser completamente inaccesiles, quedando solo disponible la interfaz del usuario.
-        \item Filtrar toda conexión a la red eléctrica para evitar comunicaciones PLC. Se prefiere en cambio operación a baterías, duplicada en capacidad de energía como repaldo.
-        \item No poseer memoria flash ni otro tipo de memoria no-volátil accesible en ejecución.
-        \item La arquitectura debe contar con separación física (por hardware) entre memoria de datos y memoria de instrucciones de proceso (programa).
-        \item Otro items más que se pueden encontrar en \cite{conicet}
-    \end{itemize}
-\end{enumerate}
+Los riesgos que implica una máquina de emisión del voto a nivel de hardware son:
+\begin{itemize}
+    \item La máquina no está operativa.
+    \item Manipulación para modificar la intención del voto.
+    \item Manipulación en el guardado y/o transmisión de información adicional que permita posteriormente asociar al elector con su voto.
+    \item Manipulación para alterar la representación de la oferta electoral.
+    \item Se reemplazó por otro hardware no autorizado indistinguible por los usuarios.
+\end{itemize}
+Al ser una fase muy crítica esta máquina de emisión debe tener un diseño y construcción robusta para resistir manipulaciones maliciosas y vandalismo. Por lo tanto, existen ciertos requerimientos mínimos a nivel técnico del hardware como por ejemplo no debe tener almacenamiento estático (disco rígido, SSD, etc.), los componentes no deben ser accesibles salvo únicamente a través de la interfaz del usuario, para evitar comunicaciones PLC se debe filtrar toda conexión a la red eléctrica, es preferible el uso de baterías, no poseer memoria flash ni otro tipo de memoria no-volátil accesible en ejecución, y otros items descritos en articulo de Conicet \cite{conicet}
 
 \section{Costo en tecnología}
-Uno de los principales factores para la selección de la tecnología a utilizar es la inversión necesaria. En el caso de hardware de uso específico para procesos de votación, su tasa de uso temporal es extremadamente baja pero se asume que se encuentra justificada en funcion de la importancia y seguridad del proceso. A esto debe sumarse el costo del depósito, traslado y custodia. \newline
-El sistema usado para las elecciones provinciales en Neuquén para 2019 costó cerca de 100 millones de pesos, por la empresa MSA ganadora de la licitación. Este costo incluye capacitación del personal interviniente.\cite{eleccionesNeuquen}
+Uno de los principales factores para la selección de la tecnología a utilizar es la inversión necesaria. Para el caso del hardware usado para procesos de votación, el uso relativamente bajo pero se encuentra justificada en función del impacto y seguridad del proceso. A esto debe sumarse el costo del depósito, traslado y custodia. \newline
+%\cambiar{El sistema usado para las elecciones provinciales en Neuquén para 2019 costó mas de 100 millones de pesos, brindado por la empresa MSA ganadora de la licitación. Este costo incluye capacitación del personal interviniente.\cite{eleccionesNeuquen} - HECHO}
+El sistema usado para las elecciones provinciales en Neuquén para 2019 costó más de 100 millones de pesos, brindado por la empresa MSA \footnote{https://www.msa.com.ar/} ganadora de la licitación. Esta inversión incluyó custodia, traslada, hardware y capacitación del personal técnico.\cite{eleccionesNeuquen}

@@ -8,6 +8,9 @@
 \usepackage{multirow}
 \usepackage[hyphens]{url}
 \usepackage{hyperref}
+\usepackage{appendix}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+
 %todo---------------------------------
 \usepackage{caption}
 \usepackage{float}
@@ -21,12 +24,20 @@
 \definecolor{darkgray}{rgb}{.4,.4,.4}
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
 
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+
+\renewcommand{\appendixpagename}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixname}{Anexo}
+
 \begin{document}
 
 \listoftodos[Todo-list]
 
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\listtablename}{Índice de tablas}
+
 
 %Empieza la numeración en números romanos
 \frontmatter
@@ -71,7 +82,7 @@
 \input{Gukena2}
 \input{cap4}
 \input{conclusion}
-%\input{cap4}
+\input{anexos}
 %...
 \vfill
 \newpage

@@ -1,10 +1,14 @@
 \label{Gukena}
 \chapter{Gukena}
+\cambiar{referencias mal citadas}
+\cambiar{Si es cita textual se podría poner entre '' . \begin{quote}\textit{``Los usuarios exigen cualidades al software destinadas a facilitar su trabajo, ahorrar tiempo (de uso y de aprendizaje), evitar y corregir los errores''} \cite{definicionUsuarioInterfaz}\end{quote}}
 Los usuarios exigen cualidades al software destinadas a facilitar su trabajo, ahorrar tiempo (de uso y de aprendizaje), evitar y corregir los errores \cite{definicionUsuarioInterfaz}. El cómputo provisorio de los votos en la Universidad Nacional del Comahue se realizaba en forma manual por una persona, encargada de ingresar los datos en una planilla electrónica. Esta persona era responsable de gestionar correctamente los resultados y distribuir los cargos. La forma de trabajo generaba un cuello de botella en la carga de los datos produciendo una demora de varias horas y hasta días en obtener los resultados finales.
 
-Luego de haber analizado las propiedades sensibles que pueden ser afectados al involucrar tecnología en alguna de las etapas dentro del proceso electoral, se desarrolla Gukena con la intención de ayudar y/o acompañar a esta persona responsable. Siempre dentro de las etapas sobre las cuales se corre menos riesgo de corromper la voluntad del votante. Gukena es un sistema responsable de realizar estos cómputos y distribuir la carga de trabajo hacia distintos sitios. Ha sido utilizado con éxito en las últimas elecciones que se desarrollaron en el ámbito de la Universidad Nacional del Comahue, usado a partir del año 2016. Este sistema ayuda a distribuir el trabajo en lo que respecta a la carga de la información de votos, y acorta el tiempo de espera para conocer los resultados provisorios de las elecciones, incluso permite observar resultados parciales en tiempo real.\newline
+Luego de haber analizado las propiedades sensibles que pueden ser afectadas al involucrar tecnología en alguna de las etapas dentro del proceso electoral, se desarrolla Gukena con la intención de ayudar y/o 
+%\cambiar{acompañar al área responsable de realizar el cómputo de la elección.}
+acompañar al área responsable de realizar el cómputo de las elecciones. Siempre dentro de las etapas sobre las cuales se corre menor riesgo de corromper la voluntad del votante. Gukena es un sistema responsable de realizar estos cómputos y distribuir la carga de trabajo hacia distintos sitios. Ha sido utilizado con éxito en las últimas elecciones que se desarrollaron en el ámbito de la Universidad Nacional del Comahue, usado a partir del año 2016. Este sistema ayuda a distribuir el trabajo en lo que respecta a la carga de la información de votos, y acorta el tiempo de espera para conocer los resultados provisorios de las elecciones, incluso permite observar resultados parciales en tiempo real.\newline
 
-Una vez que la autoridad de mesa finaliza el recuento y completa el acta en papel,  la información es ingresada en el sistema manualmente desde cualquier computadora o dispositivo móvil con acceso a Internet. Previamente, las autoridades de mesa, recibieron un breve instructivo de carga y un sobre cerrado con usuario y clave para ingresar al sistema. De igual modo, además de esta carga electrónica, el acta en papel es enviada a la Junta Electoral. Con esto, ante cualquier inconveniente que pueda surgir, como la falta de acceso a Internet o cualquier otro,  impidiendo que el acta sea cargada por la autoridad de mesa, la Junta Electoral es quien se responsabiliza en realizar su carga al sistema.
+Una vez que la autoridad de mesa finaliza el recuento y completa el acta en papel,  la información es ingresada en el sistema manualmente desde cualquier computadora o dispositivo móvil con acceso a Internet. Previamente, las autoridades de mesa, recibieron un breve instructivo de carga y un sobre cerrado con usuario y clave para ingresar al sistema. De igual modo, además de esta carga electrónica, el acta en papel es enviada a la Junta Electoral. Con este soporte papel se resuelve cualquier inconveniente que pueda surgir, como la falta de acceso a Internet o cualquier otro,  impidiendo que el acta sea cargada por la autoridad de mesa, siendo la Junta Electoral quien se responsabiliza en realizar su carga al sistema.
 
 Como segunda etapa, la junta electoral accede al sistema y verifica los datos cargados cotejando con las actas recibidas, permitiendo así resolver cualquier error de carga. 
 El proceso de escrutinio finaliza con una última validación, sobre los datos de todas las mesas, a cargo de la secretaria de la Junta Electoral. 
@@ -18,12 +22,17 @@ Algunas ventajas de utilizar el sistema, además de la disminución del tiempo e
 \item Ayudar a comprender mejor los datos de un acta mal redactada o poco legible,
 \item Detectar consistencia en el recuento de votos. Contar con doble verificación permite detectar la totalidad de errores y validación de datos durante la carga del acta, ofreciendo mayor seguridad en esos momentos. Como por ejemplo, en casos en que se pretende registrar más votantes que la cantidad de empadronados que contiene la mesa.
 \item Distribución de responsabilidades, tanto a nivel de carga de datos sobre distintos sitios, como distribución de roles dentro del sistema electoral como es la carga y validación.
-\item Mejora en la visualización y búsqueda de datos cargados dentro del sistema, como es por tipo de cargo o unidad académica, disponible a cualquier persona que acceda a la página de resultados.
+\item Mejora en la visualización y búsqueda de datos cargados dentro del sistema, como ser por tipo de cargo o unidad académica, disponible a cualquier persona que acceda a la página de resultados.
+\agregar{ Historial de elecciones pasadas disponible para consulta}
+
 \end{itemize}
 
 \section{Análisis}
 \subsection{Metodología de desarrollo}
-Utilizar una metodología adecuada al momento de un desarrollo es importante para lograr el objetivo del producto final. Existen muchas metodologías tradicionales y ágiles, estas últimas permiten un proceso de desarrollo más rápido con la intención de no afectar la calidad del producto. Una metodología ágil consiste en un desarrollo incremental con iteraciones muy cortas, beneficiando principalmente a proyectos con requisitos cambiantes y con exigencias en los tiempos de desarrollo \cite{canos2012metodologias}. Volcando este concepto dentro del desarrollo de Gukena se puede decir que se utilizó la metodología SCRUM. Cada año representa una iteración (o sprint), donde cada iteración duraba de 4-5 semanas de desarrollo con reuniones cada semana dentro de cada iteración. Las Historias de Usuario son las técnicas para especificar los requisitos del software, estas describen brevemente las características que el sistema debe poseer, requisitos funcionales o no funcionales.
+Utilizar una metodología adecuada al momento de un desarrollo es importante para lograr el objetivo del producto final. Existen muchas metodologías tradicionales y ágiles, estas últimas permiten un proceso de desarrollo más rápido con la intención de no afectar la calidad del producto. Una metodología ágil consiste en un desarrollo incremental con iteraciones muy cortas, beneficiando principalmente a proyectos con requisitos cambiantes y con exigencias en los tiempos
+de desarrollo \cite{canos2012metodologias}. 
+\cambiar{Volcando este concepto dentro del desarrollo de Gukena se utilizó una adaptación de la metodología SCRUM.}
+Volcando este concepto dentro del desarrollo de Gukena se puede decir que se utilizó la metodología SCRUM. Cada año representa una iteración (o sprint), donde cada iteración duraba de 4-5 semanas de desarrollo con reuniones cada semana dentro de cada iteración. Las Historias de Usuario son las técnicas para especificar los requisitos del software, estas describen brevemente las características que el sistema debe poseer, requisitos funcionales o no funcionales.
 \subsection{Historias de usuario en Gukena}
  Cada historia de usuario establecida en Gukena es comprensible y delimitada para que el equipo conformado pueda llevarla a cabo en unas semanas. A continuación se listan las historias de usuario que formaron parte de Gukena:
  \begin{enumerate}
@@ -82,9 +91,10 @@ A través de los años Gukena sufrió una evolución en su funcionalidad y usabi
 \end{enumerate}
 
 \section{Diseño}
+\agregar{un párrafo que describe el concepto de diseño y una breve descripción de la Sección.}
 \subsection{Arquitectura}
 \begin{figure}[h!]
-  \includegraphics[width=\textwidth]{arquitectura.png}
+  \includegraphics[width=\textwidth]{img/arquitectura.png}
   \caption{Arquitectura}
   \label{graf:arquitectura}
 \end{figure}
@@ -97,15 +107,24 @@ Gukena se implementó sobre una arquitectura dividida en tres módulos (imagen \
 \end{itemize}
 
 La propiedad de usabilidad es importante para que un sistema sea fácil de aprender y de utilizar. Cada uno de estos módulos implican actividades disjuntas dentro del sistema, por lo tanto, para cada rol se le dispuso una interacción distinta con el sistema. \newline
-El público en general tiene la necesidad de ver los resultados parciales durante el proceso de escrutinio, para cumplir este objetivo se accede a Gukena a través del siguiente link \footnote{Sitio resultados: \url{https://resultados.uncoma.edu.ar/gukena/}}.
-Esta página es accesible desde cualquier navegador, contiene un historial de elecciones, categorías de búsqueda de información, gráficos y descripciones explicativas sobre los datos visualizados. Por otro lado, el rol de autoridad de mesa tiene la necesidad de transmitir la información del resultado de su escritinio, por este motivo acceden a \url{https://gukena.fi.uncoma.edu.ar/},
+El público en general tiene la necesidad de ver los resultados parciales durante el proceso de escrutinio, para cumplir este objetivo se accede a Gukena a través del sitio público de resultados \footnote{Sitio resultados: \url{https://resultados.uncoma.edu.ar}}.
+Esta página es accesible desde cualquier navegador, contiene un historial de elecciones, categorías de búsqueda de información, gráficos y descripciones explicativas sobre los datos visualizados. Por otro lado, el rol de autoridad de mesa tiene la necesidad de transmitir la información del resultado de su escritinio, por este motivo acceden a sitio \footnote{Sitio Autoridades de Mesa y Junta Electoral: \url{https://gukena.fi.uncoma.edu.ar/}},
 donde se loguean con la información recibida previamente y acceden a una única pantalla con un formulario correspondiente a la mesa escrutada. Por último tenemos al módulo de Junta Electoral quienes necesitan validar y/o corregir la información cargada en el sistema. Acceden al mismo link que una autoridad de mesa con la diferencia que al validar múltiples mesas, el sistema le dispone un listado de todas las mesas, con filtros y categorías para facilitar su búsqueda. Además, cada mesa se encuentra etiquetada con información sobre su estado, es decir, si ya fue cargada por la autoridad de mesa correspondiente o en la espera de su carga. Por cada mesa se le despliega la misma pantalla que se dispone a una autoridad de mesa para que pueda hacer las correcciones necesarias con una acción de validar esta información. Cabe destacar que una autoridad de mesa solo tiene disponible el formulario de carga hasta que envia la información cargada, a partir de ese momento solo puede visualizar el formulario pero no volver a editarlo.\newline
 
-Por otro lado, a nivel técnico Gukena se desarrolló sobre una infraestructura web LAPP como variación a la arquitectura LAMP. Es decir, se implementó sobre un sistema base Linux, servidor web Apache, sistema gestor de base de datos PostgreSQL, y el lenguaje de programación PHP. Siendo todas estas herramientas libres y gratuitas consiguiendo las mismas prestaciones que cualquier herramienta que no sea libre.
+%\agregar{citaa LAMP - HECHO}
+Por otro lado, a nivel técnico Gukena se desarrolló sobre una infraestructura web LAPP como variación a la arquitectura LAMP. Las siglas LAMP corresponde al paquete open source  \cite{chaparro2006lamp} que contiene: 
+\begin{itemize}
+    \item Linux: Sistema Operativo basado en software libre.
+    \item Apache: Servidor web.
+    \item MySQL: Servidor de base de datos relacionales open source.
+    \item PHP: Lenguaje de programación open source embebido en páginas HTML, ejecutado en el servidor. Compatible con distintos sistemas operativos y bases de datos.
+\end{itemize} Gukena se implementó sobre un sistema base Linux, servidor web Apache, el lenguaje de programación PHP y como variación utilizó el sistema gestor de base de datos PostgreSQL. 
 
 
 \subsection{Modelo de datos}
-La semántica de este problema se representó sobre una base de datos relacional utilizando herramientas de software libre. Se utilizó el Gestor de Base de Datos PostgreSQL sobre un sistema operativo Linux. El modelo de datos representa los conceptos más importantes en un dominio, conociendo el proceso de elección en la Universidad Nacional del Comahue se puede ver que las clases más importantes son: Unidad Electoral, mesas, claustros, actas y las listas oficializadas para cada cargo. En base a estas clases principales tenemos los votos que recibe cada lista postulada que se agrupan por las sedes que conforman cada Unidad Electoral. Además para mantener el histórico de elecciones se tiene la clase de acto electoral manteniendo las fechas de cada elección realizada.\newline
+ \cambiar{hablaría de entidades en vez de clases}
+
+La semántica de este problema se representó sobre una base de datos relacional utilizando herramientas de software libre. Se utilizó el Gestor de Base de Datos PostgreSQL sobre un sistema operativo Linux. El modelo de datos representa los conceptos más importantes en un dominio, conociendo el proceso de elección en la Universidad Nacional del Comahue se puede ver que las clases más importantes son: unidad electoral, mesas, claustros, actas y las listas oficializadas para cada cargo. En base a estas clases principales tenemos los votos que recibe cada lista postulada que se agrupan por las sedes que conforman cada Unidad Electoral. Además para mantener el histórico de elecciones se tiene la clase de acto electoral manteniendo las fechas de cada elección realizada.\newline
 Conociendo el modelo de datos, al momento de una nueva elección es necesario realizar una precarga de datos sobre:
 \begin{itemize}
     \item Acto electoral con fecha de la nueva elección, asociando los claustros que votarán y las unidades electorales y sedes participantes
@@ -113,17 +132,18 @@ Conociendo el modelo de datos, al momento de una nueva elección es necesario re
     \item Listas oficializadas para cada claustro y el cargo al que se postula
     \item Usuarios habilitados a ingresar al sistema
 \end{itemize}
-
+%\cambiar{Diagrama del modelo de datos que representa las relaciones de la tablas en la Bases de Datos PostgreSQL - HECHO}
 \begin{figure}[h!]
-  \includegraphics[width=\textwidth]{gu_kena_diagramaBD.jpg}
-  \caption{Diagrama de clases}
+  \includegraphics[width=\textwidth]{img/gu_kena_diagramaBD.jpg}
+  \caption{Relación entre las tablas almacenadas en la Base de Datos Gukena}
   \label{graf:diagramaBD}
 \end{figure}
 
 Este modelo de datos representado en la Figura \ref{graf:diagramaBD} es el almacenamiento principal del sistema, es decir, la carga de datos por parte de las autoridades de mesa y Junta Electoral y, el procesamiento de los resultados impacta sobre esta fuente de datos. 
 
 \subsection{Interoperabilidad externa}
-La visualización de los resultados al público en general dispone de una segunda fuente de datos de Gukena conformada por archivos en formato JSON. Estos archivos son actualizados durante el escrutinio cada 5 minutos y son el resultado de procesar los datos existentes en la base de datos SQL. Estos archivos son consumidos por la página de Gukena pública, sin embargo, pueden ser consultados por cualquier sistema o persona que los quiera acceder. Por esto a continuación se describe brevemente la estructura y notación utilizada para un acceso externo a Gukena.
+\agregar{Agregar que se trata de una API REST.  Describir y citar que significa API REST. Poner un link real a modo de ejemplo }
+La visualización de los resultados al público en general dispone de una segunda fuente de datos de Gukena conformada por archivos en formato JSON. Estos archivos son actualizados durante el escrutinio cada 5 minutos y son el resultado de procesar los datos existentes en la base de datos SQL. Estos archivos son consumidos por la página de Gukena pública, sin embargo, pueden ser consultados por cualquier sistema o persona que los quiera acceder. A continuación se describe brevemente la estructura y notación utilizada para un acceso externo a Gukena.
 La estructura de estos archivos está formada por:
 \begin{itemize}
     \item data (lista, sigla , total de votos, sede)
@@ -179,22 +199,83 @@ CS(Consejo Superior) & CRUB & G(Graduados)\\ \hline
 
 \subsection{Seguridad}
 Una vulnerabilidad (en términos de informática) es una debilidad o fallo en un sistema de información que pone en riesgo la seguridad de la información pudiendo permitir que un atacante pueda comprometer la integridad, disponibilidad o confidencialidad de la misma \cite{definicionVulnerabilidad}.
+%\agregar{cita OWASP y tablita resumen de posibles ataques y formas de mitigarlos - HECHO}
+
 Se ha contemplado y evaluado la Seguridad en cada fase  del diseño e implementación del sistema.  La principal amenaza es que se vulnere el enlace con los usuarios que cargan y verifican los datos.  Por esta razón, los tres módulos están publicados en un servidor web Apache a través del protocolo HTTPS para asegurar el enlace. Además, la verificación de la Junta Electoral y la confirmación de la Secretaría se realizan dentro de una red interna. \newline
-Además no existe un enlace directo entre los datos del escrutinio cargado al sistema y los datos visualizados por el público. Los datos procesados son depositados en archivos con formato JSON los cuales son actualizados continuamente cada 5 minutos por un script interno y, estos archivos son levantados por la página web para su correcta visualización. Existen muchos tipos de ataques a los datos de un sistema con el fin de obtener información, manipularlos o destruirlos. Podemos nombrar algunos de estos ataques como por ejemplo: accesos no autorizados al sistema o a la base de datos, inyección por SQL, Malware y spear phising, etc. El término Inyección por SQL consiste en la inserción de código SQL por medio de los datos de entrada desde la parte del cliente hacia la aplicación. Es decir, por medio de la inserción de este código el atacante puede modificar las consultas originales que debe realizar la aplicación y ejecutar otras totalmente distintas con la intención de acceder a la herramienta, obtener información de alguna de las tablas o borrar los datos almacenados, entre otras muchas cosas. Al conocer este término se puede ver que debido a que la página utiliza archivos para alimentarse y no realiza consultas SQL directas a la base de datos, este tipo de ataque no es posible. Como mayor daño podría llegar a ser manipular o destruir estos archivos, que luego son reemplazados nuevamente de manera automática por el sistema con los datos reales y correctos. \newline
-Otro de los ataques que se nombraron es el acceso no autorizado al sistema con el objetivo de manipular los datos cargados del escrutinio en una mesa en particular, o un conjunto de ellas. Los usuarios con los roles de Autoridad de mesa, Junta Electoral y Secretaría tienen login con nombre de usuario y clave para ingresar al sistema. Esta información es enviada de manera impresa dentro de un sobre cerrado con la instrucción de que la persona encargada del cierre de la mesa de votación lo abra para ingresar al sistema. Además se registra cada acción de inserción y modificación que se realiza en los formularios del sistema en un log general. \newline
+%\cambiar{Así mismo,} 
+Así mismo, no existe un enlace directo entre los datos del escrutinio cargado al sistema y los datos visualizados por el
+público. Los datos procesados son depositados en archivos con formato JSON los cuales son actualizados continuamente cada 5 minutos por un script interno y, estos archivos son levantados por la página web para su correcta visualización. \newline
+Existe una fundación sin fines de lucro OWASP (Open Web Application Security Project) \footnote{URL: https://owasp.org/} cuyo objetivo es mejorar la seguridad del software. OWASP Top 10 es un documento estándar de conscientización para desarrolladores sobre la seguridad en aplicaciones web. Este documento contiene los 10 riesgos más críticos en seguridad, el ranking obtenido en el 2020 se representa en la tabla \ref{tab:top10}.
+
+\begin{table}
+  \begin{tabular}{p{0.35\textwidth}p{0.65\textwidth}}
+    \toprule
+Riesgo & Prevención\\
+    \midrule
+    1.Inyección & \tabitem Parametrizar las consultas \\
+    & \tabitem Validar los datos ingresados  \\
+    & \tabitem Escapar caracteres especiales  \\
+    \hline
+    2.Autenticación rota & \tabitem Usar buenas librerias de autenticación\\
+    & \tabitem Forzar el uso de contraseñas fuertes \\
+    & \tabitem Detectar y prevenir ataques de fuerza bruta \\
+    \hline
+    3.Datos sensibles expuestos & \tabitem No guardar datos que no se necesiten\\
+    & \tabitem Usar un encriptado fuerte \\
+    \hline
+    4.XML Entidades Externas (XXE) & \tabitem Evitar XML\\
+    & \tabitem Usar librerías modernas con una buena configuración \\
+    & \tabitem Validar XML \\
+    \hline
+    5.Control de acceso rota & \tabitem Usar códigos o librerías probadas\\
+    & \tabitem Por defecto denegar el acceso \\
+    & \tabitem Guardar fallas y alertar \\
+    & \tabitem Acceso limitado en accesos a recursos \\
+    \hline
+    6.Mala configuración de seguridad & \tabitem Deshabilitar servicios no usados\\
+    & \tabitem Usar herramientas para revisar configuraciones \\
+    \hline
+    7.Cross-site Scripting (XSS) & \tabitem Codificar todos los datos recibidos del usuario\\
+    & \tabitem Usar una codificación apropiada al contexto \\
+    & \tabitem Usar frameworks que genere HTML seguro \\
+    & \tabitem Usar política de seguridad de contenido \\
+    \hline
+    8.Deserealización insegura & \tabitem Evitar serializar y deserealizar objetos\\
+    & \tabitem Usar firmas para detectar manipulaciones\\
+    & \tabitem Configurar librerias seguras \\
+    & \tabitem Limites de accesos a recursos \\
+    \hline
+    9.Utilización de componentes con vulnerabilidades conocidas 
+    & \tabitem Reducir dependencias\\
+    & \tabitem Parches admnistradas \\
+    & \tabitem Escanear componentes vencidos\\
+    & \tabitem Presupuestar por el mant. continuo de todos los proyectos de software \\
+    \hline
+    10.Logging y monitoreo insuficientes \\
+    \bottomrule
+  \end{tabular}
+  \caption{OWASP Top 10}
+\label{tab:top10}
+\end{table}
+
+
+Como se puede ver existen distintos tipos de ataques a los datos de un sistema con el fin de obtener información, manipularlos o destruirlos. El término Inyección por SQL consiste en la inserción de código SQL por medio de los datos de entrada desde el lado de cliente hacia el servidor. Es decir, por medio de la inserción de este código el atacante puede modificar las consultas originales que debe realizar la aplicación y ejecutar otras totalmente distintas con la intención de acceder a la herramienta, obtener información de alguna de las tablas o borrar los datos almacenados, entre otras muchas cosas. Al conocer este término se puede ver que debido a que la página utiliza archivos para alimentarse y no realiza consultas SQL directas a la base de datos, este tipo de ataque no es posible. Como mayor daño podría llegar a ser manipular o destruir estos archivos, que luego son reemplazados nuevamente de manera automática por el sistema con los datos reales y correctos. \newline
+Otro de los ataques que se nombraron es el acceso no autorizado al sistema con el objetivo de manipular los datos cargados del escrutinio en una mesa en particular, o un conjunto de ellas. Los usuarios con los roles de Autoridad de mesa, Junta Electoral y Secretaría tienen login con nombre de usuario y clave para ingresar al sistema. Esta información es enviada de manera impresa dentro de un sobre cerrado con la instrucción de que la persona encargada del cierre de la mesa de votación lo abra para ingresar al sistema. Además se registra cada acción de inserción y modificación que se realiza en los formularios del sistema en un log general para cubrir el riesgo 10 nombrado en el ranking. \newline
 
 \subsection{Proceso de la Elección}
 
 El procedimiendo electoral en la Universidad Nacional del Comahue se rige a través de la Ordenanza Nº1386/13, del Consejo Superior de la Universidad Nacional del Comahue \cite{ordenanzaUncoma}. Luego de varias elecciones exitosas dentro del ámbito, se establece una metodología a utilizar para computar los resultados de actos electorales realizados en el ámbito de la Universidad Nacional del Comahue, utilizando un sistema de escrutinio descentralizado. \newline
 El proceso electoral utilizando Gukena se compone de los siguientes pasos:
+\agregar{Paso 1: Carta marina. Carga de listas ...}
 \begin{itemize}
+
 \item Paso 1: Carga de listas y mesas. Se carga la información de las listas de candidatos oficializadas y las mesas electorales con su respectiva cantidad de empadronados.
 \item Paso 2: Se validan los datos cargados en el Sistema. Se corrobora que la información cargada en la Base de Datos del Sistema gukena es la misma que la que fue oficializada por la Junta Electoral.
 \item Paso 3: Sobres con usuario. Se arma un sobre para cada mesa que contenga la información del Usuario y la Contraseña para poder acceder al sistema. Ejemplo en la imagen \ref{graf:ejemploSobre}
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[scale=0.5]{jKz6EB2F9Z.png}
+        \includegraphics[scale=0.5]{img/jKz6EB2F9Z.png}
     \end{center}
   \caption{Ejemplo Sobre enviado dentro de la urna de la mesa nº1}
   \label{graf:ejemploSobre}
@@ -207,7 +288,7 @@ Una vez que haya finalizado el Acto Electoral, las Autoridades de Mesa realizan 
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[scale=0.25]{f4P4qmrKXY.png}
+        \includegraphics[scale=0.25]{img/f4P4qmrKXY.png}
     \end{center}
   \caption{Ejemplo Acta en papel completada por una Autoridad de Mesa}
   \label{graf:ejemploActa}
@@ -219,7 +300,7 @@ Cuando los datos del acta son confirmados o enviados por la Autoridad de Mesa, e
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[scale=0.5]{ZJ3mtjmmdZ.png}
+        \includegraphics[scale=0.5]{img/ZJ3mtjmmdZ.png}
     \end{center}
   \caption{Pantalla de login para el módulo Autoridad de Mesa y Junta Electoral}
   \label{graf:ejemploLogin}
@@ -235,14 +316,14 @@ Cuando los datos del acta son confirmados o enviados por la Autoridad de Mesa, e
 \section{Desarrollo}
 Gukena ha sido construido por el Grupo de Desarrollo Euclides \cite{euclides} que está integrado por un conjunto de no docentes, estudiantes avanzados y docentes de la Facultad de Informática en la Universidad Nacional del Comahue y funciona bajo la dirección de la Subsecretaría de Tecnologías de la Información de la misma Universidad. El sistema se desarrolló durante los meses de abril a junio a partir del 2015 y los años siguientes, integrándose mejoras evolutivas en cada año.
 
-Para el desarrollo del sistema se utiliza el modelo de ciclo de vida iterativo e incremental, basado en la metodología Scrum, para promover un proceso de construcción ágil y una comunicación fluida con el cliente y, conseguir los beneficios del sistema de forma incremental. En 2015 una primera versión se utilizó para validar las planillas usadas hasta el momento, en 2016 y 2017 se empleó el sistema de forma completa.  En 2018 fue la primera vez que se utilizó en una elección completa considerando los cuatro claustros y la elección de Rector, Decano, Consejeros Directivos y Superiores. Este año se aplicaron mejoras sobre las pantallas accesibles por el público en general que permiten ver los resultados parciales en tiempo real, junto a un histórico de elecciones. Esta mejora fue bien aceptada por el público y permitió a los medios de comunicación tener un acceso rápido.
+Para el desarrollo del sistema se utiliza el modelo de ciclo de vida iterativo e incremental, basado en la metodología Scrum, para promover un proceso de construcción ágil y una comunicación fluida con el cliente y, conseguir los beneficios del sistema de forma incremental. En 2015 una primera versión se utilizó para validar las planillas usadas hasta el momento, en 2016 y 2017 se empleó el sistema de forma completa.  En 2018 fue la primera vez que se utilizó en una elección completa considerando los cuatro claustros y la elección de Rector, Decano, Consejeros Directivos y Superiores. Este año se aplicaron mejoras sobre las pantallas accesibles por el público en general que permiten ver los resultados parciales en tiempo real, junto a un histórico de elecciones. Esta mejora fue bien aceptada por la comunidad universitaria permitiendo a los medios de comunicación y público general tener un acceso rápido a los resultados.
 
 En la construcción, diseño e implementación de Gukena se utilizan solamente herramientas de software libre. Se usa el ambiente desarrollo web SIU Toba \cite{toba}, que es desarrollado por el consorcio SIU para soluciones del Sistema Universitario Nacional. Esta herramienta  permite crear sistemas transaccionales en forma rápida, utilizando tecnología web open-source y apunta a agilizar el proceso de construcción y el mantenimiento de los mismos, a través de la reducción de tareas repetitivas, se permite al equipo de desarrollo enfocar su actividad en la lógica del dominio.  El ambiente integra el lenguaje de programación PHP, servidor web Apache, sistema operativo Linux y bases de datos PostgreSQL, entre otros.
 
 Se trabaja utilizando con la filosofía del desarrollo opensource, para contribuir a mejorar el mantenimiento del sistema. Los fuentes son de licencia libre y acceso público, se encuentran disponibles en un repositorio libre
 \footnote{Github: \url{https://github.com/svs07uni/gu_kena}} 
 con la intención  de que la comunidad de desarrolladores, investigadores, y comunidad de la Universidad puedan acceder al software y analizarlo.
-
+\agregar{reformular descripción MVC toba con fragmentos de código y gráfico}
 El ambiente de desarrollo web SIU Toba está basado en el patrón arquitectónico MVC (Model, View, Controller), el cual separa los datos de una aplicación, la interfaz de usuario y la lógica de control en tres componentes distintos. Este patrón permite la separación de conceptos, características que buscan facilitar la tarea de desarrollo de aplicaciones y su posterior mantenimiento. Por lo tanto, este tipo de arquitectura permitió dividir tareas de desarrollo dentro del grupo Euclides y permitió facilitar su evolución por cada año de experiencia. \newline
 De manera genérica los componentes de MVC se pueden describir como:
 \begin{itemize}
