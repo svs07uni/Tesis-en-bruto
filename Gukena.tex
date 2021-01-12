@@ -1,8 +1,9 @@
 \label{Gukena}
 \chapter{Gukena}
-\cambiar{referencias mal citadas}
-\cambiar{Si es cita textual se podría poner entre '' . \begin{quote}\textit{``Los usuarios exigen cualidades al software destinadas a facilitar su trabajo, ahorrar tiempo (de uso y de aprendizaje), evitar y corregir los errores''} \cite{definicionUsuarioInterfaz}\end{quote}}
-Los usuarios exigen cualidades al software destinadas a facilitar su trabajo, ahorrar tiempo (de uso y de aprendizaje), evitar y corregir los errores \cite{definicionUsuarioInterfaz}. El cómputo provisorio de los votos en la Universidad Nacional del Comahue se realizaba en forma manual por una persona, encargada de ingresar los datos en una planilla electrónica. Esta persona era responsable de gestionar correctamente los resultados y distribuir los cargos. La forma de trabajo generaba un cuello de botella en la carga de los datos produciendo una demora de varias horas y hasta días en obtener los resultados finales.
+%\cambiar{referencias mal citadas}
+%\cambiar{Si es cita textual se podría poner entre '' . \begin{quote}\textit{``Los usuarios exigen cualidades al software destinadas a facilitar su trabajo, ahorrar tiempo (de uso y de aprendizaje), evitar y corregir los errores''} \cite{definicionUsuarioInterfaz}\end{quote}}
+\begin{quote}\textit{``Los usuarios exigen cualidades al software destinadas a facilitar su trabajo, ahorrar tiempo (de uso y de aprendizaje), evitar y corregir los errores''} \cite{definicionUsuarioInterfaz}\end{quote} 
+El cómputo provisorio de los votos en la Universidad Nacional del Comahue se realizaba en forma manual por una persona, encargada de ingresar los datos en una planilla electrónica. Esta persona era responsable de gestionar correctamente los resultados y distribuir los cargos. La forma de trabajo generaba un cuello de botella en la carga de los datos produciendo una demora de varias horas y hasta días en obtener los resultados finales.
 
 Luego de haber analizado las propiedades sensibles que pueden ser afectadas al involucrar tecnología en alguna de las etapas dentro del proceso electoral, se desarrolla Gukena con la intención de ayudar y/o 
 %\cambiar{acompañar al área responsable de realizar el cómputo de la elección.}
@@ -23,7 +24,8 @@ Algunas ventajas de utilizar el sistema, además de la disminución del tiempo e
 \item Detectar consistencia en el recuento de votos. Contar con doble verificación permite detectar la totalidad de errores y validación de datos durante la carga del acta, ofreciendo mayor seguridad en esos momentos. Como por ejemplo, en casos en que se pretende registrar más votantes que la cantidad de empadronados que contiene la mesa.
 \item Distribución de responsabilidades, tanto a nivel de carga de datos sobre distintos sitios, como distribución de roles dentro del sistema electoral como es la carga y validación.
 \item Mejora en la visualización y búsqueda de datos cargados dentro del sistema, como ser por tipo de cargo o unidad académica, disponible a cualquier persona que acceda a la página de resultados.
-\agregar{ Historial de elecciones pasadas disponible para consulta}
+\item Histórico de elecciones de fácil acceso público desde cualquier navegador o dispositivo con acceso a Internet.
+%\agregar{ Historial de elecciones pasadas disponible para consulta}
 
 \end{itemize}
 
@@ -31,8 +33,8 @@ Algunas ventajas de utilizar el sistema, además de la disminución del tiempo e
 \subsection{Metodología de desarrollo}
 Utilizar una metodología adecuada al momento de un desarrollo es importante para lograr el objetivo del producto final. Existen muchas metodologías tradicionales y ágiles, estas últimas permiten un proceso de desarrollo más rápido con la intención de no afectar la calidad del producto. Una metodología ágil consiste en un desarrollo incremental con iteraciones muy cortas, beneficiando principalmente a proyectos con requisitos cambiantes y con exigencias en los tiempos
 de desarrollo \cite{canos2012metodologias}. 
-\cambiar{Volcando este concepto dentro del desarrollo de Gukena se utilizó una adaptación de la metodología SCRUM.}
-Volcando este concepto dentro del desarrollo de Gukena se puede decir que se utilizó la metodología SCRUM. Cada año representa una iteración (o sprint), donde cada iteración duraba de 4-5 semanas de desarrollo con reuniones cada semana dentro de cada iteración. Las Historias de Usuario son las técnicas para especificar los requisitos del software, estas describen brevemente las características que el sistema debe poseer, requisitos funcionales o no funcionales.
+%\cambiar{Volcando este concepto dentro del desarrollo de Gukena se utilizó una adaptación de la metodología SCRUM.}
+Volcando este concepto dentro del desarrollo de Gukena se utilizó una adaptación de la metodología SCRUM. Cada año representa una iteración (o sprint), donde cada iteración duraba de 4-5 semanas de desarrollo con reuniones cada semana dentro de cada iteración. Las Historias de Usuario son las técnicas para especificar los requisitos del software, estas describen brevemente las características que el sistema debe poseer, requisitos funcionales o no funcionales.
 \subsection{Historias de usuario en Gukena}
  Cada historia de usuario establecida en Gukena es comprensible y delimitada para que el equipo conformado pueda llevarla a cabo en unas semanas. A continuación se listan las historias de usuario que formaron parte de Gukena:
  \begin{enumerate}
@@ -91,8 +93,11 @@ A través de los años Gukena sufrió una evolución en su funcionalidad y usabi
 \end{enumerate}
 
 \section{Diseño}
-\agregar{un párrafo que describe el concepto de diseño y una breve descripción de la Sección.}
+El diseño de un software se compone de un conjunto de principios, conceptos y prácticas para lograr un producto con mejor calidad \cite{pressman1988ingenieria}. El diseño permite representar el sistema que se quiere desarrollar previo a generar lineas de código, una de estas representaciones es la arquitectura del sistema. A continuación se describe la arquitectura de Gukena. 
+
+%\agregar{un párrafo que describe el concepto de diseño y una breve descripción de la Sección.}
 \subsection{Arquitectura}
+
 \begin{figure}[h!]
   \includegraphics[width=\textwidth]{img/arquitectura.png}
   \caption{Arquitectura}
@@ -122,9 +127,9 @@ Por otro lado, a nivel técnico Gukena se desarrolló sobre una infraestructura 
 
 
 \subsection{Modelo de datos}
- \cambiar{hablaría de entidades en vez de clases}
+ %\cambiar{hablaría de entidades en vez de clases}
 
-La semántica de este problema se representó sobre una base de datos relacional utilizando herramientas de software libre. Se utilizó el Gestor de Base de Datos PostgreSQL sobre un sistema operativo Linux. El modelo de datos representa los conceptos más importantes en un dominio, conociendo el proceso de elección en la Universidad Nacional del Comahue se puede ver que las clases más importantes son: unidad electoral, mesas, claustros, actas y las listas oficializadas para cada cargo. En base a estas clases principales tenemos los votos que recibe cada lista postulada que se agrupan por las sedes que conforman cada Unidad Electoral. Además para mantener el histórico de elecciones se tiene la clase de acto electoral manteniendo las fechas de cada elección realizada.\newline
+La semántica de este problema se representó sobre una base de datos relacional utilizando herramientas de software libre. Se utilizó el Gestor de Base de Datos PostgreSQL sobre un sistema operativo Linux. El modelo de datos representa los conceptos más importantes en un dominio. Conociendo el proceso de elección en la Universidad Nacional del Comahue se observan las entidades más importantes que son: unidad electoral, mesas, claustros, actas y las listas oficializadas para cada cargo. En base a estos conceptos principales tenemos los votos que recibe cada lista postulada que se agrupan por las sedes que conforman cada Unidad Electoral. Además para mantener el histórico de elecciones se tiene la entidad Acto Electoral manteniendo las fechas de cada elección realizada.\newline
 Conociendo el modelo de datos, al momento de una nueva elección es necesario realizar una precarga de datos sobre:
 \begin{itemize}
     \item Acto electoral con fecha de la nueva elección, asociando los claustros que votarán y las unidades electorales y sedes participantes
@@ -142,8 +147,10 @@ Conociendo el modelo de datos, al momento de una nueva elección es necesario re
 Este modelo de datos representado en la Figura \ref{graf:diagramaBD} es el almacenamiento principal del sistema, es decir, la carga de datos por parte de las autoridades de mesa y Junta Electoral y, el procesamiento de los resultados impacta sobre esta fuente de datos. 
 
 \subsection{Interoperabilidad externa}
-\agregar{Agregar que se trata de una API REST.  Describir y citar que significa API REST. Poner un link real a modo de ejemplo }
-La visualización de los resultados al público en general dispone de una segunda fuente de datos de Gukena conformada por archivos en formato JSON. Estos archivos son actualizados durante el escrutinio cada 5 minutos y son el resultado de procesar los datos existentes en la base de datos SQL. Estos archivos son consumidos por la página de Gukena pública, sin embargo, pueden ser consultados por cualquier sistema o persona que los quiera acceder. A continuación se describe brevemente la estructura y notación utilizada para un acceso externo a Gukena.
+%\agregar{Agregar que se trata de una API REST.  Describir y citar que significa API REST. Poner un link real a modo de ejemplo - REVISAR}
+Un programa ejecutado del lado cliente se comunica con los servicios web a través de APIs (Application Programming Interfaces). Las APIs exponen un conjunto de datos y funciones para facilitar la interacción entre programas y así poder intercambiar información. El estilo de arquitectura REST es aplicado comúnmente en el diseño de APIs de servicios web modernos. Por lo tanto, una API web implementado con esta arquitectura es un API REST. \cite{masse2011rest}
+
+Gukena expone este conjunto de datos a través de archivos en formato JSON con una arquitectura propia que permite su fácil consulta desde programas cliente. Estos archivos son actualizados durante el escrutinio cada 5 minutos y son el resultado de procesar los datos existentes en la base de datos SQL. Estos archivos son consumidos por la página de Gukena pública, sin embargo, pueden ser consultados por cualquier sistema o persona que los quiera acceder. A continuación se describe brevemente la estructura y notación utilizada para un acceso externo a Gukena.
 La estructura de estos archivos está formada por:
 \begin{itemize}
     \item data (lista, sigla , total de votos, sede)
@@ -198,7 +205,8 @@ CS(Consejo Superior) & CRUB & G(Graduados)\\ \hline
 \end{table}
 
 \subsection{Seguridad}
-Una vulnerabilidad (en términos de informática) es una debilidad o fallo en un sistema de información que pone en riesgo la seguridad de la información pudiendo permitir que un atacante pueda comprometer la integridad, disponibilidad o confidencialidad de la misma \cite{definicionVulnerabilidad}.
+Las vulnerabilidades de un software afectan a la seguridad de un sistema, estos pueden ser debilidades funcionales o lógicos.
+Descubrir estas vulnerabilidades es importante para proteger la información. \cite{definicionVulnerabilidad}.
 %\agregar{cita OWASP y tablita resumen de posibles ataques y formas de mitigarlos - HECHO}
 
 Se ha contemplado y evaluado la Seguridad en cada fase  del diseño e implementación del sistema.  La principal amenaza es que se vulnere el enlace con los usuarios que cargan y verifican los datos.  Por esta razón, los tres módulos están publicados en un servidor web Apache a través del protocolo HTTPS para asegurar el enlace. Además, la verificación de la Junta Electoral y la confirmación de la Secretaría se realizan dentro de una red interna. \newline
@@ -266,10 +274,10 @@ Otro de los ataques que se nombraron es el acceso no autorizado al sistema con e
 
 El procedimiendo electoral en la Universidad Nacional del Comahue se rige a través de la Ordenanza Nº1386/13, del Consejo Superior de la Universidad Nacional del Comahue \cite{ordenanzaUncoma}. Luego de varias elecciones exitosas dentro del ámbito, se establece una metodología a utilizar para computar los resultados de actos electorales realizados en el ámbito de la Universidad Nacional del Comahue, utilizando un sistema de escrutinio descentralizado. \newline
 El proceso electoral utilizando Gukena se compone de los siguientes pasos:
-\agregar{Paso 1: Carta marina. Carga de listas ...}
+%\agregar{Paso 1: Carta marina. Carga de listas ...}
 \begin{itemize}
 
-\item Paso 1: Carga de listas y mesas. Se carga la información de las listas de candidatos oficializadas y las mesas electorales con su respectiva cantidad de empadronados.
+\item Paso 1: Carta marina. Carga de listas y mesas. Se carga la información de las listas de candidatos oficializadas y las mesas electorales con su respectiva cantidad de empadronados.
 \item Paso 2: Se validan los datos cargados en el Sistema. Se corrobora que la información cargada en la Base de Datos del Sistema gukena es la misma que la que fue oficializada por la Junta Electoral.
 \item Paso 3: Sobres con usuario. Se arma un sobre para cada mesa que contenga la información del Usuario y la Contraseña para poder acceder al sistema. Ejemplo en la imagen \ref{graf:ejemploSobre}
 
@@ -314,24 +322,47 @@ Cuando los datos del acta son confirmados o enviados por la Autoridad de Mesa, e
 
 
 \section{Desarrollo}
-Gukena ha sido construido por el Grupo de Desarrollo Euclides \cite{euclides} que está integrado por un conjunto de no docentes, estudiantes avanzados y docentes de la Facultad de Informática en la Universidad Nacional del Comahue y funciona bajo la dirección de la Subsecretaría de Tecnologías de la Información de la misma Universidad. El sistema se desarrolló durante los meses de abril a junio a partir del 2015 y los años siguientes, integrándose mejoras evolutivas en cada año.
+Gukena ha sido construido por el Grupo de Desarrollo Euclides \footnote{Euclides: http://euclides.uncoma.edu.ar/?q=somos} que está integrado por un conjunto de no docentes, estudiantes avanzados y docentes de la Facultad de Informática en la Universidad Nacional del Comahue y funciona bajo la dirección de la Subsecretaría de Tecnologías de la Información de la misma Universidad. El sistema se desarrolló durante los meses de abril a junio a partir del 2015 y los años siguientes, integrándose mejoras evolutivas en cada año.
 
-Para el desarrollo del sistema se utiliza el modelo de ciclo de vida iterativo e incremental, basado en la metodología Scrum, para promover un proceso de construcción ágil y una comunicación fluida con el cliente y, conseguir los beneficios del sistema de forma incremental. En 2015 una primera versión se utilizó para validar las planillas usadas hasta el momento, en 2016 y 2017 se empleó el sistema de forma completa.  En 2018 fue la primera vez que se utilizó en una elección completa considerando los cuatro claustros y la elección de Rector, Decano, Consejeros Directivos y Superiores. Este año se aplicaron mejoras sobre las pantallas accesibles por el público en general que permiten ver los resultados parciales en tiempo real, junto a un histórico de elecciones. Esta mejora fue bien aceptada por la comunidad universitaria permitiendo a los medios de comunicación y público general tener un acceso rápido a los resultados.
+Para el desarrollo del sistema se utiliza el modelo de ciclo de vida iterativo e incremental, basado en la metodología Scrum, para promover un proceso de construcción ágil y una comunicación fluida con el cliente y, conseguir los beneficios del sistema de forma incremental. En 2015 una primera versión se utilizó para validar las planillas usadas hasta el momento, en 2016 y 2017 se empleó el sistema de forma completa.  En 2018 fue la primera vez que se utilizó en una elección completa considerando los cuatro claustros y los cargos de Rector, Decano, Consejeros Directivos y Superiores. Este año se aplicaron mejoras sobre las pantallas accesibles por el público en general que permiten ver los resultados parciales en tiempo real, junto a un histórico de elecciones. Esta mejora fue bien aceptada por la comunidad universitaria permitiendo a los medios de comunicación y público en general tener un acceso rápido a los resultados.
 
-En la construcción, diseño e implementación de Gukena se utilizan solamente herramientas de software libre. Se usa el ambiente desarrollo web SIU Toba \cite{toba}, que es desarrollado por el consorcio SIU para soluciones del Sistema Universitario Nacional. Esta herramienta  permite crear sistemas transaccionales en forma rápida, utilizando tecnología web open-source y apunta a agilizar el proceso de construcción y el mantenimiento de los mismos, a través de la reducción de tareas repetitivas, se permite al equipo de desarrollo enfocar su actividad en la lógica del dominio.  El ambiente integra el lenguaje de programación PHP, servidor web Apache, sistema operativo Linux y bases de datos PostgreSQL, entre otros.
+En la construcción, diseño e implementación de Gukena se utilizan solamente herramientas de software libre. Se usa el ambiente desarrollo web SIU Toba \footnote{SIU Toba: https://www.siu.edu.ar/siu-toba/}, que es desarrollado por el consorcio SIU para soluciones del Sistema Universitario Nacional. Esta herramienta  permite crear sistemas transaccionales en forma rápida, utilizando tecnología web open-source y su objetivo es agilizar el proceso de construcción y el mantenimiento de los mismos y, de esta manera se permite al equipo de desarrollo enfocar su actividad en la lógica del dominio.  El ambiente integra el lenguaje de programación PHP, servidor web Apache, sistema operativo Linux y bases de datos PostgreSQL, entre otros.
 
-Se trabaja utilizando con la filosofía del desarrollo opensource, para contribuir a mejorar el mantenimiento del sistema. Los fuentes son de licencia libre y acceso público, se encuentran disponibles en un repositorio libre
+Se trabaja utilizando con la filosofía del desarrollo de código abierto, para contribuir a mejorar el mantenimiento del sistema. Los fuentes son de licencia libre y acceso público, se encuentran disponibles en un repositorio libre
 \footnote{Github: \url{https://github.com/svs07uni/gu_kena}} 
 con la intención  de que la comunidad de desarrolladores, investigadores, y comunidad de la Universidad puedan acceder al software y analizarlo.
-\agregar{reformular descripción MVC toba con fragmentos de código y gráfico}
-El ambiente de desarrollo web SIU Toba está basado en el patrón arquitectónico MVC (Model, View, Controller), el cual separa los datos de una aplicación, la interfaz de usuario y la lógica de control en tres componentes distintos. Este patrón permite la separación de conceptos, características que buscan facilitar la tarea de desarrollo de aplicaciones y su posterior mantenimiento. Por lo tanto, este tipo de arquitectura permitió dividir tareas de desarrollo dentro del grupo Euclides y permitió facilitar su evolución por cada año de experiencia. \newline
+%\agregar{reformular descripción MVC toba con fragmentos de código y gráfico}
+El ambiente de desarrollo web SIU Toba está basado en el patrón arquitectónico MVC (Model, View, Controller), el cual separa los datos de una aplicación, la interfaz de usuario y la lógica de control en tres componentes distintos.
+Este patrón permite la separación de conceptos, características que buscan facilitar la tarea de desarrollo de aplicaciones y su posterior mantenimiento. Por lo tanto, este tipo de arquitectura permitió dividir tareas de desarrollo dentro del grupo Euclides y permitió facilitar su evolución por cada año de experiencia. \newline
 De manera genérica los componentes de MVC se pueden describir como:
 \begin{itemize}
     \item Model (Modelo): Es la representación de la información con la cual el sistema opera y gestiona todos los accesos a dicha información. En este contexto, el Modelo permite guardar y consultar los datos del escrutinio final por cada mesa. Además este componente se encargó de aplicarle las fórmulas necesarias para conseguir el resultado provisorio y/o final de la distribución de escaños. Otra información importante que gestionó fue el log de actualizaciones sobre estos datos, esto permite satisfacer las propiedades de auditabilidad, ya que se registran las actualizaciones por parte de las autoridades de mesa y personal de la Junta Electoral autorizada.
     \item View (Vista): Presenta el Modelo de una manera adecuada para interactuar, es decir, la interfaz de usuario. Se encarga de la representación visual de los datos que gestiona el Modelo. Gukena dispuso una vista por cada módulo de interacción. De manera tal que una autoridad de mesa solo accede a un formulario de carga, una persona autorizada de la Junta Electoral accede a un listado de mesas a validar, y por último una vista más gráfica para el módulo de Resultados. Este componente tiene la responsabilidad de satisfacer las propiedades de usabilidad del sistema.
     \item Controller (Controlador): Responde a eventos e invoca peticiones al Modelo, se encarga de controlar las acciones del usuario y de solicitar los datos al Modelo para comunicarselos a la vista. En Gukena, el Controlador suministró los datos mediante dos vias, una de ellas es la comunicación directa entre Vista y Modelo para los módulos de Autoridad de Mesa y Junta Electoral, sin embargo, para el módulo de Resultados el controlador 'empaquetaba' los datos y los depositaba en archivos JSON, los cuales eran el origen de datos para este módulo.
 \end{itemize}
-Como se puede ver, una de las ventajas de esta arquitectura MVC es que permite separar los componentes de una aplicación dependiendo de la repsonsabilidad que tienen. Esto respeta el principio de la responsabilidad única.
+*En la Figura \ref{graf:mvcArquitectura} se puede ver las interacciones entre estos componentes para lograr que el Usuario acceda a los Datos del sistema. Uuna de las ventajas de esta arquitectura MVC es que permite separar los componentes de una aplicación dependiendo de la responsabilidad que tienen. Esto respeta el principio de la responsabilidad única.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[scale=0.5]{img/mvc_arq.png}
+    \end{center}
+  \caption{Arquitectura del Framework}
+  \label{graf:mvcArquitectura}
+\end{figure}
+
+SIU Toba respeta notaciones para referir a cada uno de estos componentes, por ejemplo en la imagen \ref{graf:ejemploPantalla} se puede ver una parte del código de configuración sobre el controlador asociado a la mesa. Al tener la palabra ´´conf'' refiere a la configuración y la palabra ´´pant'' se asocia a la pantalla denominada ´´edicion''. De igual modo, se puede observar como se accede al Modelo dentro de este framework con la siguiente linea
+\begin{lstlisting}
+$this->dep('datos')->tabla('nombreTabla')}
+\end{lstlisting}
+Esta arquitectura ayuda a su mantenimiento ya que el código queda más prolijo y claro.
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[scale=0.5]{img/ejemplo_pantalla.png}
+    \end{center}
+  \caption{CI Mesa - Carga de pantalla de Edición de una mesa}
+  \label{graf:ejemploPantalla}
+\end{figure}
 
 \section{Testing}
 El Testing de un software es cualquier actividad cuyo objetivo es evaluar un atributo o la capacidad de un programa o sistema y determina si logró encontrar los resultados esperados \cite{pan1999software}. Esto no significa que únicamente se utiliza para debuggear un software, el propósito del Testing es asegurar la calidad, verificación y validación, o estimación de confiabilidad. Esta actividad contiene métodos y técnicas destinadas a múltiples propósitos durante las fases dentro de un desarrollo de software. Testing se puede dividir como: testing de correctitud, testing en performance, testing en confiabilidad y testing de seguridad. Un tester puede abocarse a verificar la correctitud de un sistema o software sin conocer internamente su funcionamiento, conocido como testing de caja negra (black-box testing) o por el contrario, planificar los casos de test de acuerdo a los detalles de implementación del software (testing de caja blanca o white-box testing). \newline
