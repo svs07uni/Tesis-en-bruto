@@ -1,5 +1,8 @@
-\label{Gukena2}
 \chapter{Elecciones Uncoma con Gukena}
+\label{Gukena2}
+El proceso electoral comienza cuando se definen las fechas de oficialización de padrones y listas, acto electoral, escrutinio provisorio, escrutinio definitivo y proclamación de autoridades electas. Se considera que un sistema de votación exitoso debe cumplir el principal objetivo que es construir la confianza de toda persona involucrada en el proceso. 
+Antes del 2015, el cómputo provisorio de los votos en la Universidad Nacional del Comahue se realizaba en forma manual por una persona, encargada de ingresar los datos en una planilla electrónica. Esta persona era responsable de gestionar correctamente los resultados y distribuir los cargos. La forma de trabajo generaba un cuello de botella en la carga de los datos y una demora de varias horas y hasta días en obtener los resultados finales. \newline
+A continuación se detallan los resultados obtenidos luego de comenzar a utilizar Gukena en las elecciones de la universidad agrupados por año. Estas experiencias brindaron un gran aporte a esta tesis al poder analizar la implementación de este sistema en un contexto real.
 
 \section{Experiencia 16 de Junio de 2015}
 Para las elecciones celebradas el 16 de Junio de 2015, Gukena se validó con el archivo xls usado en el escrutinio. Este año tuvo información de 18 Unidades Electorales distribuidas en 16 localidades con un total de 34 mesas. 
@@ -148,4 +151,51 @@ Del total de mesas:
 Ningún acta fue corregida por la Junta Electoral, lo que implica un 0\% de error en la carga realizada por las autoridades de mesa, o lo que es lo mismo un 100\% de datos correctamente cargados por las autoridades de mesas.
 
 \section{Velocidad de carga}
+Como se puede ver en la tabla \ref{tab:comparativaExperiencias} entre las 21:00 y 22:00 hrs se logró un 50\% de carga del escrutinio  en cada elección (Gráfico \ref{graf:cargaGukena}). Se puede observar que las elecciones en el año 2018 fue el más abarcativo participando la totalidad de la universidad y con renovación de todos los cargos, sin embargo esto no afectó a la velocidad de carga ya que solo generó que 10 min. más tarde comparado al año anterior se llegó a conseguir el 50\% de la totalidad de los datos. Como Gukena obliga a realizar el escrutinio de la mesa de forma manual no se podría reducir este tiempo de espera sin poner en riesgo la eficacia del proceso electoral. Otra característica que se pudo observar fue la velocidad de aprendizaje de las personas involucradas. Como se puede ver en el 2016, primer año en que Gukena comenzó a utilizarse en este ámbito se logró una buena velocidad de carga no variando en los años siguientes, teniendo en cuenta el tamaño de cada elección.
 
+
+\begin{table}[h]
+  \begin{tabular}{|l|l|l|l|l|l|}
+    \toprule
+Año & Cant. Mesas & Cant. Empadronados & 50\% carga & Cargos & Claustros\\
+    \midrule
+    2015 & 34 & 9.560 & - & \tabitem Consejo Superior & \tabitem Estudiantes \\
+    & & & & \tabitem Consejo Directivo & \\
+    \hline
+    2016 & 77 & 22.313 & 21:06 & \tabitem Consejo Superior & \tabitem Estudiantes \\
+    & & & & \tabitem Consejo Directivo & \tabitem No docentes \\
+    & & & & & \tabitem Graduados \\
+    \hline
+    2017 & 32 & 9.504 & 21:10 & \tabitem Consejo Superior & \tabitem Estudiantes \\
+    & & & & \tabitem Consejo Directivo &  \\
+    \hline
+    2018 (1ª) & 95 & 30.192 & 21:50 & \tabitem Consejo Superior & \tabitem Estudiantes \\
+    & & & & \tabitem Consejo Directivo & \tabitem No docentes \\
+    & & & & \tabitem Rector & \tabitem Graduados \\
+    & & & & \tabitem Decano & \tabitem Docentes \\
+    \hline
+    2018 (2ª) & 97 & 30.192 & 20:30 & \tabitem Rector & \tabitem Estudiantes \\
+    & & & & & \tabitem No docentes \\
+    & & & & & \tabitem Graduados \\
+    & & & & & \tabitem Docentes \\
+    \hline
+    2019 & 30 & 9.283 & 21:00 & \tabitem Consejo Superior & \tabitem Estudiantes \\
+    & & & & \tabitem Consejo Directivo &  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Comparativa Experiencias UnComa}
+\label{tab:comparativaExperiencias}
+\end{table}
+
+\agregar{pk: agregar gráfico de experiencias y conclusión}
+
+\begin{figure}[h!]
+    \begin{center}
+        \includegraphics[width=\textwidth]{img/experienciasPorcCarga.png}
+    \end{center}
+  \caption{Porcentaje de carga}
+  \label{graf:experienciaPorcCarga}
+\end{figure}
+
+A partir de estas experiencias podemos ver en el gráfico \ref{graf:experienciaPorcCarga} el porcentaje acumulado durante el periodo de escrutinio para cada acto electoral.  \newline
+Se puede notar que en el primer año que se utilizaba Gukena (año 2016) la velocidad de carga fue más tardía siendo que a partir de la 01:00 am se comenzó la carga de las actas al sistema. Esto se puede entender a que cada sistema nuevo requiere su periodo de adaptación y aprendizaje sobre los usuarios. En este gráfico se observa que hubo una mejora notable en los tiempos de carga de los datos al sistema por cada acto electoral. Analizando la amplitud del dominio, Gukena logró cubrir la totalidad de elecciones realizado en el 2018 cuando se requerían elegir todos los cargos de la UnComa y debian elegir todos los claustros. Como se observa en el gráfico, en el año 2018 (1ra vuelta) se logró una velocidad de carga constante y muy buena.
