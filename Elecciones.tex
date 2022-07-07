@@ -1,9 +1,9 @@
 \chapter{Análisis Elecciones}
 \label{Elecciones}
 %\agregar{Introducción al Capítulo y Descripción de las secciones - HECHO}
-
+%\cambiar{Experiencias de implementación de voto electrónico en distintos países obtuvieron diferentes niveles de aceptación y en algunos casos luego de unos cuantos intentos volvieron al sistema electoral tradicional.}
 Un sistema de votación exitoso debe cumplir el principal objetivo que es construir la confianza de toda persona involucrada en el proceso: ciudadanos, partidos políticos, gobierno, entre otros. Como posibles alternativas en este proceso, planteadas a nivel mundial, ha sido aplicar distintas técnicas para computarizar parte del proceso de votación. 
-Experiencias de implementación de voto electrónico en distintos países obtuvieron impactos de aceptación o con unos cuantos intentos volvieron al sistema electoral tradicional.
+Experiencias de implementación de voto electrónico en distintos países obtuvieron diferentes niveles de aceptación y en algunos casos luego de unos cuantos intentos volvieron al sistema electoral tradicional.
 %\agregar{cv y pk: hacer énfasis en las secciones del capítulo que son aporte de la tesis - HECHO} 
 
 \section{Elecciones Internacionales}
@@ -22,7 +22,8 @@ En 2002 se aprueba la ley federal Help America Vote Act., que establece un organ
 La primera propuesta de voto electrónico en Irlanda se realizó en 1998 y en el 2000 se introdujo la legislación que permitió el voto electrónico. Para el 2002, se hicieron las primeras pruebas piloto con el objetivo de extenderlo al resto del pais. Pasaron unos meses para que un informe confidencial del Ministerio del Interior irlandés se filtrara a la prensa: allí se aseguraba que la integridad del proceso electoral no estaba garantizada. Entre otras fallas, el memorando interno que tomó estado público destacaba la posibilidad de que un software malicioso sencillo de programar pudiera generar una pantalla falsa en la máquina para hacer votar incorrectamente al elector. A pesar de este manto de sospecha sobre el sistema, el gobierno irlandés avanzó con el plan de implementación para las eleciones locales y europeas de 2004. Entonces creó la Comisión Independiente de Votación y Escrutinio Eletrónico para que examinara el sistema propuesto. La comisión emitió un informe en el que sostuvo que puede recomendar la utilización del sistema de voto eletrónico pero que, no podía garantizar la seguridad del voto y la rigurosidad del escrutinio. El gobierno no dio marcha atrás con el sistema pero lo puso en suspenso. La inversión que hizo Irlanda en el sistema fue uno de los argumentos principales de las autoridades para no descartar el sistema. Como resultado se registró 52 millones de libras iniciales que se le pagaron a Nedap, y se agregaban los costos de mantenimiento y de actualizacion del sistema (calculando en 700.000 euros anuales y 20.000.000 por única vez).\newline
 Finalmente, el 23 de abril de 2009 el entonces ministro anunció que quedaba descartado el sistema de voto electrónico, en base al alto costo de mantenimiento y actualización, sumado a la insatisfacción y sospechas que generó entre los electores. En 2019 se realizó una encuesta al público sobre el uso de elecciones electrónicas consiguiendo un 50\% de aceptación. \cite{eleccionesIrlanda}
 \subsection{Holanda}
-En el 2008 (un año antes que en el caso irlandés) el gobierno de Holanda había tomado la misma decisión: abandonar el sistema de voto electrónico que había comprado a una empresa local, Nedap. La batalla contra el voto eletrónico en Holanda fue un grupo de activistas informáticos denominado "We don't trust voting computers". Este grupo además de presentaciones judiciales, realizaron una demostración pública en un programa de televisión de las múltiples formas en las que se podía acceder y tomar el control de las máquinas Nedap sin demasiado esfuerzo. En menos de cinco minutos, lograron correr su propio software en una máquina de la empresa y repartir votos de acuerdo a sus preferencias, engañando al elector que utilizaba la máquina. Hasta el día de hoy, Holanda mantiene el sistema de voto por medio de boleta de papel.\cite{netherlands}
+%\cambiar{ La batalla contra el voto electrónico en Holanda fue dada por un grupo de activistas informáticos denominado}
+En el 2008 (un año antes que en el caso irlandés) el gobierno de Holanda había tomado la misma decisión: abandonar el sistema de voto electrónico que había comprado a una empresa local, Nedap. La batalla contra el voto electrónico en Holanda fue dada por un grupo de activistas informáticos denominado "We don't trust voting computers". Este grupo además de presentaciones judiciales, realizaron una demostración pública en un programa de televisión de las múltiples formas en las que se podía acceder y tomar el control de las máquinas Nedap sin demasiado esfuerzo. En menos de cinco minutos, lograron correr su propio software en una máquina de la empresa y repartir votos de acuerdo a sus preferencias, engañando al elector que utilizaba la máquina. Hasta el día de hoy, Holanda mantiene el sistema de voto por medio de boleta de papel.\cite{netherlands}
 
 %\agregar{citar fuente sumado  artículos científicos por scholar por ejemplo https://ieeexplore.ieee.org/abstract/document/7001135 - HECHO}
 \subsection{Estonia}
@@ -64,7 +65,7 @@ El 10 de Marzo de 2019, Neuquén realizó la elección para gobernador y vicegob
     \item Resultados provisorios
 \end{itemize}
 
-\newline Sobre estas elecciones se obtuvieron los siguientes datos \footnote{http://200.70.33.130/images2/Electoral/CP_10-03-2019/Info\_general/datos\_generales\_de\_la\_eleccion.pdf}:
+\newline Sobre estas elecciones se obtuvieron los siguientes datos \footnote{\url{http://200.70.33.130/images2/Electoral/CP_10-03-2019/Info\_general/datos\_generales\_de\_la\_eleccion.pdf}}:
 \begin{itemize}
     \item 493.760 neuquinos estuvieron habilitados para votar, de los cuales se contabilizó una participación del 78.44\%
     \item 1.504 mesas distribuidas en 283 escuelas, de las cuales 191 trabajaron con el sistema BUE (Boleta Única Electrónica), 86 con el sistema tradicional de papel y 6 escuelas tuvieron ambos sistemas
@@ -173,9 +174,11 @@ El año 2019 fue un año ideal para el análisis de sistemas electoral nacionale
 A través de resultados almacenados en \textit{datosoficiales.com} se consiguieron los datos de cada elección detallada en las secciones anteriores de Neuquén, Río Negro y Córdoba.   \newline
 En estas tres experiencias, las provincias contrataron a la empresa MSA \footnote{MSA \url{https://www.msa.com.ar/}} utilizando distintas técnicas, esto es, aplicando tecnología en diferentes fases y logrando los resultados como se muestra en la Tabla \ref{tab:comparativa}.
 %\agregar{En las tres experiencias, las Provincias contrataron a la empresa MSA \footnote{MSA \url{https://www.msa.com.ar/}} utilizando diferentes técnicas, aplicando tecnología en diferentes faces y logrando diferentes resultados como muestra la Tabla \ref{tab:comparativa}.}
+%\cambiar{la tabla se sale de los márgenes}
 \begin{table}[]
     \centering
-    \begin{tabular}{c|c|c|c}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
          Provincia & Neuquén& Río Negro & Córdoba   \\
          \hline
          Técnica utilizada& BUE & Tradicional & BUS \\
@@ -184,8 +187,8 @@ En estas tres experiencias, las provincias contrataron a la empresa MSA \footnot
          \hline
          Mesas& 1.504 & 1.646 & 8.654\\
          \hline
-         Tecnología aplicada a& Emisión de Voto &Comunicación de Resultados & Comunicación de Resultados \\
-         & Generación de Documentos & & \\
+         Tecnología aplicada a& Emisión de Voto &Comunicación & Comunicación \\
+         & Generación de Documentos & de Resultados &  de Resultados\\
          & Comunicación de Resultados & & \\
          \hline
          *Computado el 80\% & 20:30 & 21:10 & 23:20\\
