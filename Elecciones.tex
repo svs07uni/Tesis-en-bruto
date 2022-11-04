@@ -1,7 +1,16 @@
 \chapter{Análisis Elecciones}
 \label{Elecciones}
-%\agregar{Introducción al Capítulo y Descripción de las secciones - HECHO}
-%\cambiar{Experiencias de implementación de voto electrónico en distintos países obtuvieron diferentes niveles de aceptación y en algunos casos luego de unos cuantos intentos volvieron al sistema electoral tradicional.}
+\cambiar{No es una revisión sistemática.}
+\cambiar{El encabezado está mal.}
+\cambiar{A veces dice Figura, otras Gráfico. Unificar a Figura.}
+\cambiar{Solo nombra países donde se aplicó tecnología en alguna de las etapas, pero sin explicar el software en detalle y su uso.}
+\cambiar{La bibliografía utilizada se refiere en su mayoría a artículos de opinión de diarios como Pagina12, La mañana Neuquen, Rio Negro, TN, La voz, etc.; y algunas páginas web de opinión de sus autores (32, 16, 2, 4, 20, 26, y muchas más). Toda esa bibliografía es material de divulgación y opinión, que a pesar de que aportan a la tesis, deberían contemplarse como complemento a artículos que posean una mayor rigurosidad científica. Si no es lo que se desea, debería pensar en agregar algún método de análisis de opiniones que formalice las fuentes y la extracción del conocimiento.}
+\cambiar{Son confusos los conceptos de secreto de voto con integridad y derecho a voto.}
+\cambiar{No se realiza una comparativa entre los diferentes servicios utilizados por los distintos distritos y resultados obtenidos (u opiniones). No se sabe que se quiere comparar.}
+\cambiar{Muchas secciones no poseen la fuente de donde fue obtenida la información descripta.}
+
+
+
 Un sistema de votación exitoso debe cumplir el principal objetivo que es construir la confianza de toda persona involucrada en el proceso: ciudadanos, partidos políticos, gobierno, entre otros. Como posibles alternativas en este proceso, planteadas a nivel mundial, ha sido aplicar distintas técnicas para computarizar parte del proceso de votación. 
 Experiencias de implementación de voto electrónico en distintos países obtuvieron diferentes niveles de aceptación y en algunos casos luego de unos cuantos intentos volvieron al sistema electoral tradicional.
 %\agregar{cv y pk: hacer énfasis en las secciones del capítulo que son aporte de la tesis - HECHO} 
@@ -221,6 +230,8 @@ Otra elección que logró implementar un sistema electoral tradicional sin inter
 Por otra parte, el sistema BUE consta de una boleta con un chif RFID sobre la cual se escribe la voluntad del votante. Dentro del modelo de referencia consta de las fases de Emisión del voto y además esta boleta es utilizada para la fase posterior de Escrutinio de la mesa. A pesar del debate impulsado por varias instituciones en contra del uso de este método, varios municipios lo utilizaron. Un inconveniente que puede albergar este sistema es la limitación en pantalla. Una pantalla dispone de 18 lugares para ubicar a los candidatos. Con el uso de listas colectoras se llegaron a multiplicar las listas. La disposición de los candidatos en la pantalla de estas máquinas puede afectar la accesibilidad de los electores al reducirse el tamaño de cada cuadricula. Como ejemplo, en Plottier \cite{lmncolectoras} se dispusieron 29 candidatos a intendencia de la ciudad y 26 en Neuquén. 
 %\cambiar{Análisis de opinión pública sobre las elecciones en Neuquén Capital - HECHO}
 \subsection{Análisis sobre la opinión pública sobre las elecciones en Neuquén Capital}
+\cambiar{En la sección 3.3.2 hablan de una encuesta. ¿Quién la realizó? ¿Cómo se realizó? quiénes participaron? cuales eran las hipótesis?, qué se quería obtener como resultado? También obtienen la edad de las personas que contestaron, pero no aparece como una pregunta en la encuesta. ¿Qué preguntaba la encuesta específicamente?}
+\cambiar{Luego, nos resulta extraña la última pregunta sobre la confianza. Esa pregunta está sesgada ya que no se conoce si en otras encuestas las personas también desconfían o no de otros sistemas de voto. Entonces, ¿qué puede realmente significar ese resultado? Incluso la confianza no es una propiedad de calidad enunciada dentro de la sección 2.2.2.}
 \label{encuesta}
 Como aporte a esta tesis el día 22 de Septiembre de 2019, durante las elecciones a intendente en Neuquén Capital, se realizó una encuesta con la intención de conocer la opinión de los votantes. Al ser un municipio que luego de 4 elecciones utilizando el sistema BUE, sería una buena muestra de votantes con experiencia sobre este dispositivo. Esta actividad involucró votantes de cuatro escuelas repartidas en puntos importantes de la ciudad. Las escuelas encuestadas fueron Esc. nº201 (Barrio Centro), nº 40 (Barrio San Lorenzo), nº 20 (Barrio Don Bosco) y nº 103 (Barrio Confluencia) logrando encuestar 145 personas en total. \newline
 El objetivo de esta encuesta fue conocer el nivel de aprendizaje de los votantes sobre éste nuevo sistema y en respuesta a su uso, cuánta confianza y facilidad les resulta este medio de votación. A cada votante se le hacían cinco preguntas con opciones de respuesta para que el cuestionario se logre hacer en no más de 5 minutos. Las preguntas fueron:
@@ -240,6 +251,7 @@ Cabe aclarar que esta encuesta se realizó a 100 metros de distancia de la escue
     \item BG: Personas nacidas entre 1946-1964, representado en la tabla con edades mayores a 55 años aprox.
 \end{itemize}
 Al finalizar las encuestas se obtuvieron los datos de la Tabla \ref{tab:encuesta} donde se contabilizan la cantidad de personas que respondieron a cada opción para cada pregunta.
+\cambiar{Se le podría sacar mucho provecho a todas las figuras. También se podría obtener mucha información de la Tabla 3.2 que no se tiene en cuenta, por ejemplo, la edad que mayor confianza le tiene a los sistemas.}
 \begin{table}[h!]
 \caption{Resultado sobre los encuestados}
 \begin{center}
@@ -281,12 +293,15 @@ Al finalizar las encuestas se obtuvieron los datos de la Tabla \ref{tab:encuesta
 \end{table}
 
 Teniendo los datos finales, se logra ver una gran cantidad de personas que leen sus boletas impresas pero no así con la lectura del chip integrado en la boleta, como se observa en el Gráfico \ref{graf:votantes}. A pesar de haber experimentado este sistema en distintas elecciones se descubrió que muchos de ellos no sabían la existencia del lector de chip, dato que no se esperaba. Como se puede ver en el gráfico cerca del 50\% desconocía esta verificación y no varía según la edad generacional.
+\cambiar{Las Figuras 3.11 y 3.12 no están legibles, sino borrosas.}
 
 \begin{figure}[h!]
   \includegraphics[width=\textwidth]{img/yfrjnCosp0.png}
   \caption{Comparación entre los que leen y verifican su boleta electrónica}
   \label{graf:votantes}
 \end{figure}
+
+\cambiar{Supone que la verificación de la boleta con chip era desconocida por el votante, y en realidad es una suposición ya que la podrían no haber querido corroborar.}
 
 Otro dato curioso de estas opiniones es que casi la totalidad de las personas les resulta sencillo su uso, sin embargo, muy pocas de ellas les genera confianza. Como se puede ver en el Gráfico \ref{graf:votantesUsoConfia} la mitad de los encuestados les genera confianza o intentan confiar en este sistema. Sobre esta última característica destaca la variación de opiniones según la zona urbana encuestada, como se puede ver en la Tabla \ref{tab:encuesta}, en el área centro (Escuela nº201)  se concentra la cantidad de personas que confían en sistema BUE, seguido del área Confluencia (Escuela nº40). %\cambiar{Por otro lado las escuelas que se encuentran en zonas mas alejadas del centro no confían en este sistema. - HECHO}
 Por otro lado las demás escuelas en zonas más alejadas del centro no logran confiar en este sistema. 
@@ -296,3 +311,4 @@ Por otro lado las demás escuelas en zonas más alejadas del centro no logran co
   \label{graf:votantesUsoConfia}
 \end{figure}
 
+\cambiar{Falta una conclusión del capítulo para cerrar el tema.}

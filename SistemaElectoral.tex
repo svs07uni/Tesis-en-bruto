@@ -1,8 +1,12 @@
 \chapter{Tecnología en el Proceso Electoral}
 \label{SistemaElectoral}
-%\cambiar{Cambiaría el nombre del capítulo Tecnología en Procesos Electorales HECHO}
+\cambiar{No se describen todos los sistemas de votos existentes, y si se hace, están en forma muy resumida. No analiza ventajas y desventajas de cada uno (2.1.1). No se analizan los votos en papel sin uso de tecnología.}
+\cambiar{Se habla de Boleta única de sufragio (BUS), Boleta única, Boleta única electrónica (BUE), boleta única en papel, etc. pero no se describe ninguna.}
+\cambiar{Describe mecanismos de voto electrónico, pero no con sus características, sino con ejemplos de implementación. Deberían ser dos cosas diferentes.}
+\cambiar{Faltan referencias que respalden los conceptos plasmados y las opiniones. En general se dan muchas opiniones, en su mayoría negativas, de los sistemas electorales nombrados sin fundamentos. Es decir, son opiniones del autor? se han analizado?}
+\cambiar{A veces dice Figura, otras Gráfico, otras Imágen. Unificar Figura.}
+\cambiar{En general: El capítulo advierte de una revisión conceptual de las características de un sistema electoral tradicional (según Capítulo 1). Sin embargo, luego se mezcla con la aplicación de tecnologías al sistema. No analiza y compara los sistemas de votos. Da opiniones sin fundamento.}
 
-%\agregar {Descripción del capítulo.    -HECHO}
 Involucrar tecnología en el proceso electoral es complejo, no sólo por sus desafíos técnicos, sino también por su importancia para el Estado y para la sociedad en general. Un sistema de voto electrónico involucra considerar aspectos de software, hardware, procesos operativos, y personas. Por lo tanto, cualquier desarrollo debe tener el aspecto de calidad como el objetivo más importante en el proceso.\newline
 %\agregar{cita a texto del Ministerio - ESTO SALIÓ DEL DOCUMENTO DE CONICET Un sistema de votación debe considerar los siguientes objetivos \cite{conicet}: - HECHO}
 Un sistema de votación debe considerar los siguientes objetivos \cite{conicet}:
@@ -60,6 +64,7 @@ Se identifican 3 grandes mecanismos:
 
 
 \section{Propiedades de Calidad}
+\cambiar{Sección 2.2. No están claras las propiedades nombradas. No las explica, sino que las compara con sistemas que no fueron descriptos.}
 Para lograr un sistema electoral exitoso y confiable a la vista de las partes involucradas es necesario que cumpla ciertas propiedades de calidad, sin tener en cuenta si este proceso incluye tecnología o no. A continuación se enumeran estas propiedades que todo sistema electoral debe satisfacer.
 %\agregar{Párrafo marco sobre Atributos de Calidad - HECHO?}
 %\cambiar{A partir de las partes involucradas en el proceso surgen distintas propiedades a satisfacer un sistema electoral con o sin tecnología, que se describen a continuación. - HECHO}
@@ -117,6 +122,10 @@ Un sistema electoral regularmente no modifica sus políticas o reglas que lo con
 En todo sistema electoral (sea en formato de papel o electrónico) se ha demostrado que satisfacer los atributos de integridad, auditabilidad y secreto simultáneamente es complejo y es una tarea imposible de cumplir. Cualquier sistema de voto electrónico que intente solucionar los problemas inherentes a garantizar integridad y secreto, estará en una situación difícil para lograr una verificación formal y en auditabilidad. \cite{conicet}
 
 \section{Modelo de Referencia}
+\cambiar{Sección 2.3: La Fig 2.2 presenta un circuito de 5 etapas para el proceso electoral. Debería nombrar en cada caso donde es aplicada la tecnología. Falta describir la etapa 5
+(Procesamiento de resultados y publicación).}
+\cambiar{Las subsecciones del modelo de referencia deben tener el mismo nombre. (Conteo →
+Escrutinio de la Mesa)}
 Mediante el análisis realizado por el Conicet \cite{conicet}, el sistema de votación se puede determinar en cinco fases secuenciales del proceso susceptibles de ser automatizada (Figura \ref{graf:modeloReferencia}) . Las fases están derivadas del Código Electoral Nacional (Decreto nº2135, 1983) \cite{decreto}
 %\agregar{cita al Decreto}
 %\agregar{artículo del CONICET - HECHO}
@@ -184,6 +193,7 @@ Uno de los principales factores para la selección de la tecnología a utilizar 
 El sistema usado para las elecciones provinciales en Neuquén para 2019 costó más de 100 millones de pesos, brindado por la empresa MSA \footnote{https://www.msa.com.ar/} ganadora de la licitación. Esta inversión incluyó custodia, traslado, hardware y capacitación del personal técnico.\cite{eleccionesNeuquen}
 
 \section{Conclusión}
+\cambiar{La conclusión no tiene relación con lo realizado en el capítulo. Habla de Gukena. ¿Qué es Gukena? Nunca fue nombrado en este capítulo.}
 Tomando este modelo de referencia podemos decir que Gukena es un sistema que se involucró en las etapas menos críticas o si ocurre algún error queda en evidencia y se puede corregir al instante. Estas etapas son: 
 \begin{itemize}
     \item Conteo: sólo como ayuda para verificar datos finales, como por ejemplo la cantidad de votantes no debe superar la cantidad de empadronados en una mesa particular.

@@ -1,7 +1,9 @@
 \chapter{Gukena}
 \label{Gukena}
-%\cambiar{referencias mal citadas}
-%\cambiar{Si es cita textual se podría poner entre '' . \begin{quote}\textit{``Los usuarios exigen cualidades al software destinadas a facilitar su trabajo, ahorrar tiempo (de uso y de aprendizaje), evitar y corregir los errores''} \cite{definicionUsuarioInterfaz}\end{quote}}
+\cambiar{El título del capítulo debería ser más descriptivo.}
+\cambiar{Debe enmarcar el software en el uso de tecnologías según la Fig. 2.2. No se hace énfasis en qué etapa del proceso electoral se aplica Gukena.}
+\cambiar{Se enumeran las ventajas del sistema antes de conocerlo. A su vez, cómo se corroboraron esas ventajas? Parecen parte de una conclusión o de un resultado de experiencias.}
+\cambiar{}
 
 \begin{quote}\textit{``Los usuarios exigen cualidades al software destinadas a facilitar su trabajo, ahorrar tiempo (de uso y de aprendizaje), evitar y corregir los errores''} \cite{definicionUsuarioInterfaz}\end{quote} 
 El cómputo provisorio de los votos en la Universidad Nacional del Comahue se realizaba en forma manual por una persona, encargada de ingresar los datos en una planilla electrónica. Esta persona era responsable de gestionar correctamente los resultados y distribuir los cargos. La forma de trabajo generaba un cuello de botella en la carga de los datos produciendo una demora de varias horas y hasta días en obtener los resultados finales.
@@ -31,12 +33,23 @@ Algunas ventajas de utilizar Gukena, además de la disminución del tiempo en el
 \end{itemize}
 
 \section{Análisis}
+\cambiar{Sección 4.1. Si se nombra que se usa SCRUM, hay que explicarlo.
+	○	Se nombran las historias de usuario, pero estas no están definidas como tales.
+Puesto que las historias de usuarios se definen como:
+Como [perfil], [quiero] [para]
+■ [perfil] es para quien desarrollamos esto. Por ejemplo: como USUARIO, quiero…. para….
+■ [quiero] es la intención que tenemos, no las funciones. Ejemplo: como USUARIO quiero ORGANIZAR LOS VOTOS, para…
+■ [para] es el problema que quiero resolver. Ejemplo: Ejemplo: como USUARIO quiero ORGANIZAR LOS VOTOS, para MEJORAR LA CARGA}
 \subsection{Metodología de desarrollo}
+\cambiar{Es muy simple y resumida la explicación de la metodología de desarrollo utilizada. Además, ¿quién hizo Gukena? solo la tesista? no queda claro. ¿Cuánto duró su desarrollo? ¿En qué partes participó la tesista?}
 Utilizar una metodología adecuada al momento de un desarrollo es importante para lograr el objetivo del producto final. Existen muchas metodologías tradicionales y ágiles, estas últimas permiten un proceso de desarrollo más rápido con la intención de no afectar la calidad del producto. Una metodología ágil consiste en un desarrollo incremental con iteraciones muy cortas, beneficiando principalmente a proyectos con requisitos cambiantes y con exigencias en los tiempos
 de desarrollo \cite{canos2012metodologias}. 
 %\cambiar{Volcando este concepto dentro del desarrollo de Gukena se utilizó una adaptación de la metodología SCRUM.}
 Volcando este concepto dentro del desarrollo de Gukena se utilizó una adaptación de la metodología SCRUM. Cada año representa una iteración (o sprint), donde cada iteración duraba de 4-5 semanas de desarrollo con reuniones cada semana dentro de cada iteración. Las Historias de Usuario son las técnicas para especificar los requisitos del software, estas describen brevemente las características que el sistema debe poseer, requisitos funcionales o no funcionales.
 \subsection{Historias de usuario en Gukena}
+\cambiar{Explica las historias, pero que son las memorias? Sección 4.1.3 no se termina de entender a qué apunta la sección.}
+\cambiar{Es un sistema que funciona, pero no están bien explicadas sus partes.}
+\cambiar{Lo que se nombra en la Sección 4.1.2 son más parecidas a las tarjetas Kanban}
  Cada historia de usuario establecida en Gukena es comprensible y delimitada para que el desarrollo pueda llevarse a cabo en unas semanas. A continuación se listan las historias de usuario que formaron parte de Gukena:
  \begin{enumerate}
      \item Armado de Carta Marina: Esto es la precarga de datos de las listas oficializadas, la distribución de centros de votación (las mesas) junto con la cantidad de electores en cada uno de ellas.
@@ -96,6 +109,7 @@ A través de los años Gukena sufrió una evolución en su funcionalidad y usabi
 
 
 \section{Diseño}
+\cambiar{Sección 4.2 se presenta la arquitectura de Gukena pero no se explica en profundidad. La fig. 4.1 representa una arquitectura? A su vez deben estar introducidas las secciones que están contenidas en la misma. Mezcla arquitectura, modelos de datos, con atributos de calidad como seguridad e interoperabilidad.}
 El diseño de un software se compone de un conjunto de principios, conceptos y prácticas para lograr un producto con mejor calidad \cite{pressman1988ingenieria}. El diseño permite representar el sistema que se quiere desarrollar previo a generar lineas de código, una de estas representaciones es la arquitectura del sistema. A continuación se describe la arquitectura de Gukena. 
 
 %\agregar{un párrafo que describe el concepto de diseño y una breve descripción de la Sección.}
@@ -154,7 +168,7 @@ Conociendo el modelo de datos, al momento de una nueva elección es necesario re
     \item Listas oficializadas para cada claustro y el cargo al que se postula
     \item Usuarios habilitados a ingresar al sistema
 \end{itemize}
-%\cambiar{Diagrama del modelo de datos que representa las relaciones de la tablas en la Bases de Datos PostgreSQL - HECHO}
+\cambiar{La Figura 4.4 es ilegible y no está explicada.}
 \begin{figure}[h!]
   \includegraphics[width=\textwidth]{img/gu_kena_diagramaBD.jpg}
   \caption{Relación entre las tablas almacenadas en la Base de Datos Gukena}
@@ -227,6 +241,10 @@ CS(Consejo Superior) & CRUB & G(Graduados)\\ \hline
 \end{table}
 
 \subsection{Seguridad}
+\cambiar{La sección 4.2.4 esta confusa. Tanto interoperabilidad y seguridad se deberían haber explicado en capítulos anteriores y aquí mostrado su aplicación y verificación para Gukena. Sino mezcla el concepto (Tabla 4.2 por ejemplo) al mismo tiempo que explica cómo lo hace para Gukena.}
+\cambiar{Utiliza terminología en inglés que no se explica (Loguean, log, loguin, back, etc)}
+\cambiar{Hay artículos publicados de este software?}
+\cambiar{Hablan de LAPP y LAMP, ¿por qué motivo? no están explicados tampoco porque los citan y porque los utilizan.}
 Las vulnerabilidades de un software afectan a la seguridad de un sistema, estos pueden ser debilidades funcionales o lógicos.
 Descubrir estas vulnerabilidades es importante para proteger la información. \cite{definicionVulnerabilidad}.
 %\agregar{cita OWASP y tablita resumen de posibles ataques y formas de mitigarlos - HECHO}
@@ -293,6 +311,8 @@ Como se puede ver existen distintos tipos de ataques a los datos de un sistema c
 Otro de los ataques que se nombran es el acceso no autorizado al sistema con el objetivo de manipular los datos cargados del escrutinio en una mesa en particular, o un conjunto de ellas. Los usuarios con los roles de Autoridad de mesa, Junta Electoral y Secretaría tienen login con nombre de usuario y clave para ingresar al sistema. Esta información es enviada de manera impresa dentro de un sobre cerrado con la instrucción de que la persona encargada del cierre de la mesa de votación debe abrirlo para ingresar al sistema. Además se registra cada acción de inserción y modificación que se realiza en los formularios del sistema en un log general para cubrir el riesgo 10 nombrado en el ranking. \newline
 
 \subsection{Proceso de la Elección}
+\cambiar{Sección 4.2.5, ¿por qué es parte del diseño del software? ¿no sería el proceso que termina en un diseño?}
+\cambiar{Dice imagen en lugar de figura.}
 
 El procedimiendo electoral en la UNComa se rige a través de la Ordenanza Nº1386/13, del Consejo Superior de la Universidad Nacional del Comahue \cite{ordenanzaUncoma}. Luego de varias elecciones exitosas dentro del ámbito, se establece una metodología a utilizar para computar los resultados de actos electorales realizados en el ámbito de la UNComa, utilizando un sistema de escrutinio descentralizado. \newline
 El proceso electoral utilizando Gukena se compone de los siguientes pasos:
@@ -344,6 +364,10 @@ Cuando los datos del acta son confirmados o enviados por la Autoridad de Mesa, e
 
 
 \section{Desarrollo}
+\cambiar{Recién en la Sección 4.3 conocemos el equipo de trabajo. Solo hicieron la implementación? y el análisis y diseño quién lo hizo? A su vez, como es una tesis de la estudiante Silvia Soto se debe conocer específicamente el trabajo que realizó la tesista.}
+\cambiar{Se vuelve a especificar en la sección 4.3 el ciclo de vida y uso de SCRUM, ya dicho mucho antes. Se debería separar en secciones para conocer los trabajos de la tesista y los trabajos previos. ¿Qué trabajo quiere presentar la tesista en esta tesis?}
+\cambiar{Siguen en la Sección 4.3 y describen MVC, pero en la Sección 4.2 ya describieron el diseño y mostraron una arquitectura diferente. Al mismo tiempo la explica. La figura 4.9 está en inglés, posiblemente copiada de alguna página web. Tiene números que no están descritos en el texto y no describen qué posee Gukena en cada componente.}
+
 Gukena ha sido construido por el Grupo de Desarrollo Euclides \footnote{Euclides: http://euclides.uncoma.edu.ar/?q=somos} que está integrado por un conjunto de no docentes, estudiantes avanzados y docentes de la Facultad de Informática de la UNComa y funciona bajo la dirección de la Subsecretaría de Tecnologías de la Información de la misma Universidad. El sistema se desarrolló durante los meses de abril a junio a partir del 2015 y los años siguientes, integrándose mejoras evolutivas en cada año.
 
 Quien planteó la necesidad sobre el proceso electoral en la UNComa fue la Secretaria del Consejo Superior María Elena Sandoval. La experta del dominio ha sido de ayuda para formalizar este sistema, quien además es la principal beneficiada, porque antes de la existencia de Gukena, la administración de los resultados de las elecciones dependían de una única planilla de cálculo gestionada por la secretaria. Otro integrante principal ha sido el docente Claudio Vaucheret quien impulsó el sistema descentralizado con respecto a la carga de las actas en cada mesa de votación.
@@ -401,7 +425,7 @@ Se trabaja utilizando la filosofía del desarrollo de código abierto, para cont
 \footnote{Github: \url{https://github.com/svs07uni/gu_kena}} 
 con la intención  de que la comunidad de desarrolladores, investigadores, y comunidad de la Universidad puedan acceder al software y analizarlo.
 Como se nombró anteriormente por cada año se implementaron cambios en el sistema, estas modificaciones sobre el código se puede ver en la Figura \ref{graf:codeFrecuency} generado por la herramienta Github.
-
+\cambiar{La figura 4.8 y 4.9 no son necesarias si no están bien explicadas}
 \begin{figure}[h!]
     \begin{center}
         \includegraphics[width=\textwidth]{img/graficoGithub.png}
@@ -443,6 +467,8 @@ Esta arquitectura ayuda a su mantenimiento ya que el código queda más prolijo 
 \end{figure}
 
 \section{Testing}
+\cambiar{Sección 4.4 - Testing, podría poner ejemplos del testeo que hicieron y cómo lo llevaron a cabo.}
+\cambiar{El Testing fue trabajo de la tesista o trabajo previos?}
 El Testing de un software es cualquier actividad cuyo objetivo es evaluar un atributo o la capacidad de un programa o sistema y determina si logró encontrar los resultados esperados \cite{pan1999software}. Esto no significa que únicamente se utiliza para debuggear un software, el propósito del Testing es asegurar la calidad, verificación y validación, o estimación de confiabilidad. Esta actividad contiene métodos y técnicas destinadas a múltiples propósitos durante las fases dentro de un desarrollo de software. Testing se puede dividir como: testing de correctitud, testing en performance, testing en confiabilidad y testing de seguridad. Un tester puede abocarse a verificar la correctitud de un sistema o software sin conocer internamente su funcionamiento, conocido como testing de caja negra (black-box testing). O por el contrario, planificar los casos de test de acuerdo a los detalles de implementación del software (testing de caja blanca o white-box testing). \newline
 Para los casos de test en Gukena participó el equipo que lo desarrollo y usuarios externos a éste, como docentes de la Facultad de Informática. Los casos de test involucraron:
 \begin{itemize}
@@ -453,3 +479,5 @@ Para los casos de test en Gukena participó el equipo que lo desarrollo y usuari
     \item Accesos no autorizados por usuarios no permitidos.
     \item Testing de sobrecarga en consultas paralelas con una cantidad reducida de dispositivos en un mismo instante.
 \end{itemize}
+
+\cambiar{Falta una conclusión del capítulo para cerrar el tema.}
