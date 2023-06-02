@@ -12,6 +12,8 @@
 \usepackage{listings}
 \usepackage{booktabs}% http://ctan.org/pkg/booktabs
 \usepackage{pdfpages}
+\usepackage{verbatim}
+\usepackage{colortbl}
 
 %todo---------------------------------
 \usepackage{caption}
@@ -19,8 +21,41 @@
 \usepackage{xargs}                  
 \usepackage{color}
 \usepackage[colorinlistoftodos,prependcaption]{todonotes}
+\usepackage{url}
 \newcommandx{\cambiar}[2][1=]{\todo[inline,linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
 \newcommandx{\agregar}[2][1=]{\todo[inline,linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\propuesta}[2][1=]{\todo[inline,linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
+
+\usepackage{tikz,colortbl}
+\usetikzlibrary{calc}
+\usepackage{zref-savepos}
+\newcounter{NoTableEntry}
+\renewcommand*{\theNoTableEntry}{NTE-\the\value{NoTableEntry}}
+
+\newcommand*{\notableentry}{%
+  \multicolumn{1}{@{}c@{}|}{%
+    \stepcounter{NoTableEntry}%
+    \vadjust pre{\zsavepos{\theNoTableEntry t}}% top
+    \vadjust{\zsavepos{\theNoTableEntry b}}% bottom
+    \zsavepos{\theNoTableEntry l}% left
+    \hspace{0pt plus 1filll}%
+    \zsavepos{\theNoTableEntry r}% right
+    \tikz[overlay]{%
+      \draw[gray]
+        let
+          \n{llx}={\zposx{\theNoTableEntry l}sp-\zposx{\theNoTableEntry r}sp},
+          \n{urx}={0},
+          \n{lly}={\zposy{\theNoTableEntry b}sp-\zposy{\theNoTableEntry r}sp},
+          \n{ury}={\zposy{\theNoTableEntry t}sp-\zposy{\theNoTableEntry r}sp}
+        in
+        (\n{llx}, \n{lly}) -- (\n{urx}, \n{ury})
+        (\n{llx}, \n{ury}) -- (\n{urx}, \n{lly})
+      ;
+    }% 
+  }%
+}
+
+\addto\captionsspanish{\renewcommand{\appendixname}{Anexo}}
 
 \definecolor{lightgray}{rgb}{.9,.9,.9}
 \definecolor{darkgray}{rgb}{.4,.4,.4}
@@ -35,7 +70,7 @@
 
 \begin{document}
 
-\listoftodos[Todo-list]
+%\listoftodos[Todo-list]
 
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\listtablename}{Índice de tablas}
@@ -75,6 +110,8 @@
 % Lista de tablas o Indice de Tablas
 \listoftables
 
+
+
 %Empieza la numeración en números arábigos
 \mainmatter
 \input{Introduccion}
@@ -90,6 +127,8 @@
 \newpage
 
 \bibliographystyle{plain}
+%\bibliographystyle{plainurl}
+%\bibliographystyle{flexbib}
 \bibliography{references}
 
 \end{document}

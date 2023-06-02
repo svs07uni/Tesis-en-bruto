@@ -1,27 +1,28 @@
 \chapter{Elecciones UNComa con Gukena}
 \label{Gukena2}
-\cambiar{Repite textualmente lo que dice en el resumen, la motivación y el cap 4.}
-\cambiar{De qué fuentes se obtuvieron estas experiencias? fueron realizadas por la tesista?}
-\cambiar{En la primera experiencia no se sabe si se usó Gukena como prototipo para ver si funcionaba o se utilizó realmente. Puesto que hablan de que validaron los resultados con un xls.}
-\cambiar{No existe una comparativa en como se hacía antes de Gukena y como después, es decir, cuánto se tardaba antes y ahora. O cómo evolucionó el uso de este sistema, con los años. Si bien hay figuras, estas no están bien explicadas.}
-\cambiar{Este es un capítulo fuerte de la tesis. Debería tener mucha más presencia y más producción. Por ejemplo, en capítulos anteriores se analizó usabilidad vs integridad vs confiabilidad, y con Gukena? Solo se analiza la tasa de error de la carga de las autoridades de mesa.}
-El proceso electoral comienza cuando se definen las fechas de oficialización de padrones y listas, acto electoral, escrutinio provisorio, escrutinio definitivo y proclamación de autoridades electas. Se considera que un sistema de votación exitoso debe cumplir el principal objetivo que es construir la confianza de toda persona involucrada en el proceso. 
-Antes del 2015, una única persona era responsable de gestionar correctamente los resultados y distribuir los cargos. La forma de trabajo generaba un cuello de botella en la carga de los datos y una demora de varias horas y hasta días en obtener los resultados finales. \newline
-A continuación se detallan los resultados obtenidos luego de comenzar a utilizar Gukena en las elecciones de la universidad agrupados por año. Estas experiencias brindaron un gran aporte a esta tesis al poder analizar la implementación de este sistema en un contexto real.
+
+Gukena logró integrarse muy bien al proceso electoral de la UNComa. Además de las ventajas y riesgos de incluir tecnología en las etapas de este proceso (analizado en el Capitulo \ref{SistemaElectoral}), un sistema debe adaptarse a las reglas y protocolos inherentes al sistema electoral. Esta complejidad en la UNComa involucra cantidad de personas empadronadas, mesas de votación, claustros, listas oficializadas, cargos a cubrir y la implementación de la fórmula D'Hont para lograr los resultados finales. El procedimiendo electoral en la UNComa se rige a través de la Ordenanza Nº1386/13, del Consejo Superior de la Universidad Nacional del Comahue \cite{ordenanzaUncoma}.
+
+
+Luego de incluir Gukena, por cada acto electoral transitado se relevaron datos estadísticos como son la cantidad de mesas, empadronados, errores corregidos en las actas, velocidad de carga, entre otras. Toda esta información se encuentra disponible en la base de datos de Gukena junto al almacenamiento del sistema de registros (sistema de log) de cada operación, asociada al usuario que lo ejecutó.
+A continuación se detalla la información relevada que fue procesada y los resultados obtenidos luego de comenzar a utilizar Gukena en las elecciones de la universidad agrupados por año. 
+
+Estas experiencias brindaron un gran aporte a esta tesis al poder analizar la implementación de este sistema en un contexto real.
 
 %\cambiar{siempre son 16 unidades electorales porque los asentamientos AUZA y ASMA dependen de FAIN y FACA  habría que modificarlo}
 \section{Experiencia 16 de Junio de 2015}
-Para las elecciones celebradas el 16 de Junio de 2015, Gukena se validó con el archivo xls usado en el escrutinio. Este año tuvo información de 16 Unidades Electorales distribuidas en 16 localidades con un total de 34 mesas. 
-Ese año, la Universidad renovó integrantes del Consejo Directivo de cada unidad académica y del Consejo Superior de la Universidad, para el claustro de Estudiantes.
+Para las elecciones celebradas el 16 de Junio de 2015, Gukena no participó íntegramente en las elecciones, en este año se contó con un prototipo que fue validado con la hoja de cálculo de la Secretaria de la Junta Electoral, que contenía el resultado del escrutinio final. De todos modos, se muestra la dimensión de este escrutinio a modo informativo. Este año tuvo información de 16 Unidades Electorales distribuidas en 16 localidades con un total de 34 mesas. 
+La Universidad renovó integrantes del Consejo Directivo de cada unidad académica y del Consejo Superior de la Universidad, para el claustro de Estudiantes.
 
 De este modo, el sistema se puso a prueba frente a la siguiente información:
 \begin{itemize}
     \item La Elección se desarrolló en 16 Unidades Electorales repartidas en 34 Sedes.
-    \item 34 mesas distribuidas en las distintas sedes
-    \item 9.560 empadronados del claustro Estudiantes
-    \item 9 listas para el Consejo Superior
-    \item 45 listas para el Consejo Directivo distribuidas entre las diferentes sedes y asentamientos
+    \item 34 mesas distribuidas en las distintas sedes.
+    \item 9.560 empadronados del claustro Estudiantes.
+    \item 9 listas para el Consejo Superior.
+    \item 45 listas para el Consejo Directivo distribuidas entre las diferentes sedes y asentamientos.
 \end{itemize}
+
 A pesar de que este año no se utilizó el sistema durante el escrutinio, los datos se encuentran disponible en las elecciones históricas presente en la página de Resultados de Gukena.
 
 \section{Experiencia 14 al 17 de Mayo de 2016}
@@ -38,13 +39,15 @@ De este modo, el sistema operó frente a la siguiente información:
     \item 121 listas para el Consejo Directivo distribuidas entre las diferentes sedes, asentamientos y distintos claustros.
 \end{itemize}
 
-Durante el período de escrutinio, la primer mesa cargada con éxito en el sistema fue la Facultad de Ciencias y Ambientes de la Salud, para el claustro de graduados, 5 minutos después del cierre.\\ 
+Durante el período de escrutinio, la primera mesa cargada con éxito en el sistema fue la Facultad de Ciencias y Ambientes de la Salud, para el claustro de graduados, 5 minutos después del cierre.
+
 Con la utilización del sistema, se obtuvo la siguiente información estadística:
-66 mesas fueron cargadas directamente por autoridades de mesas siendo el 86\% del total, 39 mesas fueron cargadas entre las 20:00 hs y 21:56 hs, siendo el 51\% del total.\\
-11 mesas fueron cargados por la junta electoral, de las cuales una fue corregida en una segunda etapa de verificación.
+66 mesas fueron cargadas directamente por autoridades de mesas siendo el 86\% del total, 39 mesas fueron cargadas entre las 20:00 hs y 21:56 hs, siendo el 51\% del total.
+
+11 mesas fueron cargados por la Junta Electoral, de las cuales una fue corregida en una segunda etapa de verificación.
 Sólo 3 valores de actas fueron corregidas por la Junta Electoral, lo que implica un 0,3\% de error en lo cargado por las autoridades de mesa, o lo que es lo mismo un 99,7\% de datos correctos cargados por las autoridades de mesas.
 
-Las razones por las cuales 11 actas no pudieron ser cargadas por las Autoridades de Mesa son las siguientes:
+Las razones por las cuales 11 actas no pudieron ser cargadas por las Autoridades de Mesa fueron las siguientes:
 \begin{itemize}
 \item La persona destinada a cargar los datos no contaba con experiencia en el uso de la computadora.
 \item El extravío del sobre que contenía datos de usuario y contraseña enviado junto a la urna.
@@ -56,14 +59,14 @@ Gukena procesó información de 16 Unidades Electorales distribuidas en 14 local
 
 De este modo, el sistema operó frente a la siguiente información:
 \begin{itemize}
-    \item 32 mesas distribuidas en las distintas sedes
+    \item 32 mesas distribuidas en las distintas sedes.
     \item El padrón fue de 9504 estudiantes.
     \item 8 listas para Consejo Superior.
     \item 38 listas para el Consejo Directivo entre las diferentes sedes y asentamientos.
 \end{itemize}
   
 Del total de mesas se tuvo que 31 mesas fueron cargadas por las autoridades de mesa desde la sede donde se realizó la elección y 1 fue cargada por la Junta Electoral. Todos los datos fueron correctamente cargados, esto quiere decir que ningún dato contenido en las actas debió ser corregido por la Junta Electoral, ni por la Secretaria de la misma.
-Durante el período de escrutinio, la primer mesa cargada con éxito en el sistema fue la Facultad de Turismo sede San Martín de los Andes, 3 minutos después del cierre.
+Durante el período de escrutinio, la primera mesa cargada con éxito en el sistema fue la Facultad de Turismo sede San Martín de los Andes, 3 minutos después del cierre.
 
 De la utilización del sistema, se obtuvo la siguiente información estadística:
 31 mesas fueron cargadas directamente por autoridades de mesas, siendo el 97\% del total.
@@ -78,12 +81,13 @@ Del total de mesas:
 Ningún acta fue corregida por la Junta Electoral, lo que implica un 0\% de error en la carga realizada por las autoridades de mesa, o lo que es lo mismo un 100\% de datos correctamente cargados por las autoridades de mesas.
 
 \section{Experiencia 2018}
-\subsection{Primer vuelta 21 al 22 de Mayo de 2018}
+\label{gukena2018}
+\subsection{Primera vuelta 21 al 22 de Mayo de 2018}
 Gukena procesó información de 16 Unidades Electorales distribuidas en 14 localidades con un total de 95 mesas. Este año, la universidad renovó integrantes del Rectorado, Decanato, Consejo Directivo de cada unidad y el Consejo Superior de la UNComa en el claustro Estudiantes, Graduados, No Docentes y Docentes.
 
 De este modo, el sistema operó frente a la siguiente información:
 \begin{itemize}
-    \item 95 mesas distribuidas en las distintas sedes 
+    \item 95 mesas distribuidas en las distintas sedes.
      \item El padrón fue de  30192, distribuidos en 9486 estudiantes, 17481 graduados, 718 no docentes y 2507 docentes.
      \item 5 listas para Rectorado.
      \item 30 listas para Decano
@@ -92,7 +96,7 @@ De este modo, el sistema operó frente a la siguiente información:
 \end{itemize}
 Del total de mesas, 94 mesas fueron cargadas por las autoridades de mesa desde la sede donde se realizó la elección y 1 fue cargada por la Junta Electoral, 90 mesas fueron correctamente cargados, esto quiere decir que 5 mesas debieron ser corregidos por la Junta Electoral o por la Secretaria de la misma.
 
-Durante el período de escrutinio, la primer mesa cargada con éxito en el sistema fue la unidad electoral AUZA sede Zapala a las 19:38 hrs. debido a que al ser una mesa con muy poca concurrencia se habilitó la carga minutos antes de las 20:00 hrs.
+Durante el período de escrutinio, la primera mesa cargada con éxito en el sistema fue la unidad electoral AUZA sede Zapala a las 19:38 hrs. debido a que al ser una mesa con muy poca concurrencia se habilitó la carga minutos antes de las 20:00 hrs.
 
 De la utilización del sistema, se obtuvo la siguiente información estadística:
 93 mesas fueron cargadas directamente por autoridades de mesas, siendo el 99\% del total.
@@ -116,9 +120,10 @@ De este modo, el sistema operó frente a la siguiente información:
      \item El padrón fue de  30192, distribuidos en 9486 estudiantes, 17481 graduados, 718 no docentes y 2507 docentes.
      \item 2 listas para Rectorado y 2 listas para Decanato de FACE (Ciencias de la Educación).
 \end{itemize}
+
 Del total de mesas, 96 mesas fueron cargadas por las autoridades de mesa desde la sede donde se realizó la elección y 1 fue cargada por la Junta Electoral y, 97 mesas fueron correctamente cargados, esto quiere decir que ninguna mesa debió ser corregida por la Junta Electoral o por la Secretaria de la misma.
 
-Durante el período de escrutinio, la primer mesa cargada con éxito en el sistema fue la unidad electoral ASMA sede San Martin de los Andes a las 20:02 hrs.
+Durante el período de escrutinio, la primera mesa cargada con éxito en el sistema fue la unidad electoral ASMA sede San Martin de los Andes a las 20:02 hrs.
 
 De la utilización del sistema, se obtuvo la siguiente información estadística:
 96 mesas fueron cargadas directamente por autoridades de mesas, siendo el 99\% del total.
@@ -137,20 +142,21 @@ Gukena procesó información de 16 Unidades Electorales distribuidas en 14 local
 
 De este modo, el sistema operó frente a la siguiente información:
 \begin{itemize}
-    \item 30 mesas distribuidas en las distintas sedes
+    \item 30 mesas distribuidas en las distintas sedes.
      \item El padrón fue de  9283 estudiantes.
      \item 27 listas para el Consejo Directivo del Claustro Estudiantes.
-     \item 7 listas para Consejo Superior
+     \item 7 listas para Consejo Superior.
 \end{itemize}
+
 Del total de mesas, 30 mesas fueron cargadas por las autoridades de mesa desde la sede donde se realizó la elección y ninguna mesa fue cargada por la Junta Electoral y, ninguna mesa debió ser corregida por la Junta Electoral o por la Secretaria de la misma.
 
-Durante el período de escrutinio, la primer mesa cargada con éxito en el sistema fue la unidad electoral FAAS sede Puerto Madryn a las 20:01 hrs.
+Durante el período de escrutinio, la primera mesa cargada con éxito en el sistema fue la unidad electoral FAAS sede Puerto Madryn a las 20:01 hrs.
 
 De la utilización del sistema, se obtuvo la siguiente información estadística:
 30 mesas fueron cargadas directamente por autoridades de mesas, siendo el 100\% del total.
 
 Del total de mesas:
-15 mesas fueron cargadas antes de las 21:10 hs, siendo el 50\%,
+15 mesas fueron cargadas antes de las 21:10 hs, siendo el 50\%.
 %20 mesas fueron cargadas entre las 20:00 hs y 21:40 hs, siendo el 63\%,
 %22 mesas fueron cargadas entre las 20:00 hs y 21:50 hs, siendo el 69\% y 
 %6 mesas fueron cargadas al día siguiente, siendo el 19\%.
@@ -158,11 +164,8 @@ Del total de mesas:
 Ningún acta fue corregida por la Junta Electoral, lo que implica un 0\% de error en la carga realizada por las autoridades de mesa, o lo que es lo mismo un 100\% de datos correctamente cargados por las autoridades de mesas.
 
 \section{Velocidad de carga}
-\cambiar{Luego se analiza la velocidad de carga, pero son comparables con elecciones de mucha más población? ¿Por qué restan 2 horas? ¿de dónde se obtiene ese número?}
-\cambiar{“Gukena al no involucrarse en las etapas de emisión del voto y en el escrutinio de la mesa, logró una buena curva del escrutinio como en Neuquén, sin poner en riesgo la integridad del voto.” pero la población lo consideró confiable?}
 
-Como se puede ver en la Tabla \ref{tab:comparativaExperiencias} entre las 21:00 y 22:00 hrs se logró un 50\% de carga del escrutinio  en cada elección. Se puede observar que las elecciones en el año 2018 fue el más abarcativo participando la totalidad de la universidad y con renovación de todos los cargos, sin embargo esto no afectó a la velocidad de carga ya que solo generó que 30 min. más tarde comparado al año anterior se llegó a conseguir el 50\% de la totalidad de los datos. Como Gukena obliga a realizar el escrutinio de la mesa de forma manual no se podría reducir este tiempo de espera sin poner en riesgo la eficacia del proceso electoral. Otra característica que se pudo observar fue la velocidad de aprendizaje de las personas involucradas. Como se puede ver en el 2016, primer año en que Gukena comenzó a utilizarse en este ámbito se logró una buena velocidad de carga no variando en los años siguientes, teniendo en cuenta el tamaño de cada elección.
-
+Como se puede ver en la Tabla \ref{tab:comparativaExperiencias} entre las 21:00 y 22:00 hrs se logró un 50\% de carga del escrutinio  en cada elección. Se puede observar que las elecciones en el año 2018 fue el más abarcativo participando la totalidad de la universidad y con renovación de todos los cargos, sin embargo esto no afectó a la velocidad de carga ya que sólo generó que 30 min. más tarde comparado al año anterior se llegó a conseguir el 50\% de la totalidad de los datos. Como Gukena obliga a realizar el escrutinio de la mesa de forma manual no se podría reducir este tiempo de espera sin poner en riesgo la eficacia del proceso electoral. Otra característica que se pudo observar fue la velocidad de aprendizaje de las personas involucradas. Como se puede ver en el 2016, primer año en que Gukena comenzó a utilizarse en este ámbito se logró una buena velocidad de carga no variando en los años siguientes, teniendo en cuenta el tamaño de cada elección.
 \begin{center}
 \begin{table}[h]
   \begin{tabular}{|l|l|l|l|l|l|}
@@ -194,12 +197,10 @@ Año & Cant.  & Cant. & 50\%& Cargos & Claustros\\
     & & & & \tabitem Consejo Directivo &  \\
     \bottomrule
   \end{tabular}
-  \caption{Comparativa Experiencias UnComa}
+  \caption{Comparativa Experiencias UNComa}
 \label{tab:comparativaExperiencias}
 \end{table}
 \end{center}
-
-%\agregar{pk: agregar gráfico de experiencias y conclusión - HECHO}
 
 \begin{figure}[h!]
     \begin{center}
@@ -208,26 +209,29 @@ Año & Cant.  & Cant. & 50\%& Cargos & Claustros\\
   \caption{Porcentaje de carga}
   \label{graf:experienciaPorcCarga}
 \end{figure}
+A partir de estas experiencias podemos ver en la Figura \ref{graf:experienciaPorcCarga} el porcentaje acumulado durante el periodo de escrutinio para cada acto electoral.
 
-A partir de estas experiencias podemos ver en la Figura \ref{graf:experienciaPorcCarga} el porcentaje acumulado durante el periodo de escrutinio para cada acto electoral.  \newline
-En el año 2016, primer año que se utilizaba Gukena, se logró una buena velocidad de carga computando el 60\% de las mesas a las 22:30 hrs. Todo sistema nuevo requiere su periodo de aprendizaje y adaptación sobre los usuarios. Se puede comentar que en este año se cargaron algunas actas directamente por la Junta Electoral o la Secretaria cuando se recibían las urnas por distintas razones listadas en la subsección \ref{exp2016}. \newline
-Analizando el tamaño del dominio, Gukena logró cubrir con éxito el proceso electoral en el 2018 cuando se requerían elegir todos los cargos de la UNComa y todos los claustros debían votar. Como se puede observar en el año 2018 (1ra vuelta) se logró una muy buena velocidad de carga logrando el 60\% del escrutinio luego de 2 horas de terminado el acto electoral.\newline
-En la Figura \ref{graf:experienciaPorcCarga} se observa que el momento de mayor carga de cada año fluctúa entre las 20.30 y 23.00 hrs., notándose que por cada año nuevo que se utilizó Gukena se fue reduciendo el tiempo de espera para lograr la mayoría de las mesas cargadas. El sistema no modificó su integración dentro del proceso electoral por lo tanto, esta velocidad se logró por el aprendizaje de los usuarios. Sin necesidad de involucrar al sistema en la primer etapa del proceso, en la emisión del voto.
+En el año 2016, primer año que se utilizaba Gukena, se logró una buena velocidad de carga computando el 60\% de las mesas a las 22:30 hrs. Todo sistema nuevo requiere su periodo de aprendizaje y adaptación sobre los usuarios. Se puede comentar que en este año se cargaron algunas actas directamente por la Junta Electoral o la Secretaria cuando se recibían las urnas por distintas razones listadas en la subsección \ref{exp2016}. 
 
-En la Figura \ref{graf:provincialConGukena} se muestra el porcentaje de carga de Gukena y las elecciones provinciales en Río Negro, Córdoba, Neuquén analizadas en la subsección \ref{analisisComparativoProvincial}.
-Debido a que el horario del cierre del escrutinio a nivel provincial y en UNComa son distintos se debió modificar los tiempos de cargas de Gukena restándole 2 horas para que sean comparable entre ellas. Otra diferencia entre estas elecciones son la cantidad de mesas escrutadas, siendo mucho menor en UNComa, por lo tanto, se tomaron las experiencias de Gukena con mayor cantidad de mesas las cuales fueron las elecciones del 2018 (1ra y 2da vuelta). 
+Analizando el tamaño del dominio, Gukena logró cubrir con éxito el proceso electoral en el 2018 cuando se requerían elegir todos los cargos de la UNComa y todos los claustros debían votar. Como se puede observar en el año 2018 (1ra vuelta) se logró una muy buena velocidad de carga logrando el 60\% del escrutinio luego de 2 horas de terminado el acto electoral.
 
+En la Figura \ref{graf:experienciaPorcCarga} se observa además que el momento de mayor carga de cada año fluctúa entre las 20.30 y 23.00 hrs., notándose que por cada año nuevo que se utilizó Gukena se fue reduciendo el tiempo de espera para lograr la mayoría de las mesas cargadas. El sistema no modificó su integración dentro del proceso electoral por lo tanto, esta velocidad se logró por el aprendizaje de los usuarios. Sin necesidad de involucrar al sistema en la primera etapa del proceso, en la emisión del voto.
+
+\section{Conclusión}
+Luego de haber analizado los resultados de haber incorporado Gukena dentro del ámbito UNComa, podremos hacer un breve análisis entre estas experiencias y los datos obtenidos en las elecciones provinciales de Río Negro, Córdoba y Neuquén analizadas en la subsección \ref{analisisComparativoProvincial}. En la Figura \ref{graf:provincialConGukena} se muestra el porcentaje de carga de Gukena y las elecciones provinciales en Río Negro, Córdoba y Neuquén.
+
+Debido a que el horario del cierre del escrutinio a nivel provincial es a las 18:00 hrs y en UNComa es a las 20:00 hrs se convierten los valores del eje X en cantidad de tiempo transcurrido (horas) luego del cierre de las mesas de votación. 
 
 \begin{figure}[h!]
     \begin{center}
-        \includegraphics[width=\textwidth]{img/provincialGukena.png}
+        \includegraphics[width=\textwidth]{img/PorcentajeComparativaTodas.png}
     \end{center}
   \caption{Porcentaje de carga comparativo}
   \label{graf:provincialConGukena}
 \end{figure}
-
-En la Figura \ref{graf:provincialConGukena} muestra distintos procesos electorales que involucran tecnología en diferentes etapas. En Rio Negro se involucró tecnología en la transmisión de resultados desde nodos zonales, manteniendo boletas partidarias en papel y escrutinio manual. Como variante a las elecciones de Río Negro, Córdoba sólo se diferencia en que utiliza la boleta única papel. Para ambas elecciones se puede ver que logra una curva constante y un crecimiento lento durante toda la noche de escrutinio. Por otro lado, las elecciones de Neuquén que utilizan tecnología en todo el proceso electoral muestran un pico de crecimiento a las 20:00 hrs. Finalmente, Gukena que utiliza tecnología en las etapas siguientes al escrutinio manual también consigue una buena velocidad de cómputos. Ambos logran en poco tiempo conseguir la mayoría de las mesas escrutadas disponibles en el sistema. Para esto ambos sistemas tuvieron que pasar por un aprendizaje por parte de los usuarios. En Gukena la cantidad de personas involucradas es menor que en el sistema BUE, ya que este último involucró capacitación tanto de los técnicos (mínimo uno por escuela), autoridades de mesa y de cada votante. Gukena sólo necesita la capacitación de una persona por mesa (Autoridad de Mesa), a quien se le envió un instructivo en papel incluido en el kit de la urna. Esta ventaja de Gukena reduce notablemente el presupuesto en capacitación con respecto al sistema BUE.
+%\propuesta{Se actualizó el grafico de las comparativas entre todas las elecciones y gukena, revisar si la conclusión descrita es acorde al grafico}
+En la Figura \ref{graf:provincialConGukena} muestra distintos procesos electorales que involucran tecnología en diferentes etapas. En Río Negro se involucró tecnología en la transmisión de resultados desde nodos zonales, manteniendo boletas partidarias en papel y escrutinio manual. Como variante a las elecciones de Río Negro, Córdoba sólo se diferencia en que utiliza la BUS pero de igual modo las boletas son en papel y el escrutinio manual. Para ambas elecciones se puede ver que logra una curva constante y un crecimiento lento durante toda la noche de escrutinio. Por otro lado, las elecciones de Neuquén que utilizan tecnología en todo el proceso electoral muestran un pico de crecimiento 2 horas luego del cierre. Finalmente, Gukena utiliza tecnología en las etapas siguientes al escrutinio manual, también consigue una buena velocidad de cómputos. Ambos logran en poco tiempo conseguir la mayoría de las mesas escrutadas disponibles en el sistema. Para esto ambos sistemas tuvieron que pasar por un aprendizaje por parte de los usuarios. En Gukena la cantidad de personas involucradas es menor que en el sistema BUE en Neuquén, ya que este último involucró capacitación tanto de los técnicos (mínimo uno por escuela), autoridades de mesa y de cada votante. Gukena sólo necesita la capacitación de una persona por mesa (Autoridad de Mesa), a quien se le envió un instructivo en papel incluido en el kit de la urna. Esta ventaja de Gukena reduce notablemente el presupuesto en capacitación con respecto al sistema BUE.
 
 La encuesta de la opinión pública del sistema BUE, descrita en la subsección \ref{encuesta} nos dio evidencia de que los electores no tenían conocimiento del chip integrado en la boleta única electrónica y desconocían la existencia de la validación de estos chips usando la máquina. 
 Además se pudo observar que las autoridades de mesa en muchos casos, dejan a las máquinas la responsabilidad del conteo usando el chip y no realizan un escrutinio manual para su validación.
-Por lo tanto, se puede concluir que la curva del escrutinio en Neuquén es buena pero sin seguridad de que las máquinas realizaron un conteo correcto o que el chip integrado almacenó el dato correcto del votante. Gukena al no involucrarse en las etapas de emisión del voto y en el escrutinio de la mesa, logró una buena curva del escrutinio como en Neuquén, sin poner en riesgo la integridad del voto. 
+Por lo tanto, se puede concluir que la curva del escrutinio en Neuquén es buena pero sin seguridad de que las máquinas realizaron un conteo correcto o que el chip integrado almacenó el dato correcto del votante. Gukena al no involucrarse en las etapas de emisión del voto y en el escrutinio de la mesa, logró una buena curva de escrutinio como en Neuquén, sin poner en riesgo la integridad del voto. 

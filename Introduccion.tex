@@ -3,55 +3,49 @@
 %\cambiar{pk:El sistema electoral argentino debe asegurar que la voto sea universal...}
 %\cambiar{cv:igual? igualitario?}
 El sistema electoral argentino debe asegurar que el voto sea universal, igualitario, secreto y obligatorio \citep{arlettaz2012libertad}. El proceso electoral comienza cuando se definen las fechas de oficialización de padrones y listas, continúa con el acto electoral propiamente dicho y luego con el escrutinio provisorio, escrutinio definitivo y proclamación de autoridades electas. Se considera que un sistema de votación exitoso debe cumplir el principal objetivo que es construir la confianza de toda persona involucrada en el proceso: ciudadanos, partidos políticos, gobierno, entre otros. 
-%\cambiar{cv Han habido diferentes alternativas en este proceso, planteadas a nivel mundial, aplicando distintas técnicas para computarizar parte del proceso de votación}
 
-Han existido diferentes alternativas en este proceso, planteadas a nivel mundial, aplicando distintas técnicas para computarizar parte del proceso de votación. Existen diferentes dominios con antecedentes a estas técnicas, tanto en Argentina, como en  otros  países,  con  distintos  sistemas  de  voto  electrónico. Tomando estas experiencias y el objetivo principal que debe cumplir un sistema electoral, se parte de la idea de generar un sistema que mantenga la separación física del votante con la tecnología, y forzar un escrutinio manual por parte de las autoridades de mesa en el momento del conteo. \newline
+A nivel mundial se han implementado diferentes alternativas en este proceso aplicándose distintas técnicas para computarizar parte del proceso de votación. Tanto en Argentina, como en  otros  países,  con  distintos  sistemas  de  voto  electrónico. Junto a estas experiencias y el objetivo principal que debe cumplir un sistema electoral, se parte de la idea de generar un sistema que mantenga la separación física del votante con la tecnología, y forzar un escrutinio manual por parte de las autoridades de mesa en el momento del conteo. \newline
 En este capítulo se presenta la motivación, objetivos y organización de la tesis.
 
 \section{Motivación}
-\cambiar{Sección 1.1. La motivación no debe describir el trabajo, sino lo que motivó la decisión de realizar un trabajo de estas características.}
+%\cambiar{Sección 1.1. La motivación no debe describir el trabajo, sino lo que motivó la decisión de realizar un trabajo de estas características. - HECHO: pk:verbos a futuro}
 Antes del 2015, el cómputo provisorio de los votos en la Universidad Nacional del Comahue (UNComa) se realizaba en forma manual por una persona, encargada de ingresar los datos en una planilla electrónica. Esta persona era responsable de gestionar correctamente los resultados y distribuir los cargos. La forma de trabajo generaba un cuello de botella en la carga de los datos y una demora de varias horas y hasta días en obtener los resultados finales. \newline
-%\cambiar{ayudaría por ayudó, evitaría por evitó, permitiría por permitió. HECHO}
-%\cambiar{Con el objetivo de mejorar los tiempos del proceso de cómputo, se desarrolla HECHO}
-%\cambiar{...el sistema no quita el envío del acta papel para validar la consistencia de los datos con su respectiva acta electrónica,..}
-Con el objetivo de mejorar los tiempos del proceso de cómputo, se desarrolla la propuesta de ``acta electrónica'' basada en el proceso de carga electrónica del acta creada en papel, mediante un método descentralizado  por parte de cada autoridad de mesa. Dicha herramienta evitó el contacto del votante con un sistema electrónico, resguardando el anonimato del elector, y ayudó a que cada autoridad de mesa envíe los datos de manera rápida y transparente. De todos modos, el sistema no quita el envío del acta papel para validar la consistencia de los datos con su respectiva acta electrónica, por lo tanto existen validaciones que permiten corregir cualquier desvío en los datos cargados en el sistema. Esta herramienta permitió disminuir la demora del escrutinio final, sin afectar la claridad de la información enviada. Se logró reflejar los resultados provisorios de todas las mesas 
+
+Con el objetivo de mejorar los tiempos del proceso de cómputo, se desarrollará la propuesta de ``acta electrónica'' basada en el proceso de carga electrónica del acta creada en papel, mediante un método descentralizado  por parte de cada autoridad de mesa. Dicha herramienta evitará el contacto del votante con un sistema electrónico, resguardando el anonimato del elector, y ayudará a que cada autoridad de mesa envíe los datos de manera rápida y transparente. De todos modos, el sistema no quita el envío del acta papel para validar la consistencia de los datos con su respectiva acta electrónica, por lo tanto posee validaciones que permitirá corregir cualquier desvío en los datos cargados en el sistema. Esta herramienta permite disminuir la demora del escrutinio final, sin afectar la claridad de la información enviada. Se logrará reflejar los resultados provisorios de todas las mesas 
 %\cambiar{cv en el mismo instante en que cada autoridad de mesas envió los datos}
-en el mismo instante en que cada autoridad de mesa envió los datos.
+en el mismo instante en que cada autoridad de mesa envíe los datos.
 
 \section{Objetivos de la Tesis}
-\cambiar{Sección 1.2. No se definen objetivos específicos (revisar plan de tesis presentado).}
+%\cambiar{Sección 1.2. No se definen objetivos específicos (revisar plan de tesis presentado). - HECHO}
 El objetivo de la tesis es el diseño e implementación de un sistema de acta electrónica para el escrutinio descentralizado de elecciones. Con esto se pretende agilizar el recuento de votos y lograr un resultado provisorio disponible en tiempo real. Esta herramienta permitirá cargar los datos obtenidos en cada punto de votación y luego validar su consistencia mediante la interacción de autoridades electorales. \newline
-Se analizará además el impacto del uso de la tecnología en relación con el sistema electoral tradicional y
-%\cambiar{cv:evaluando experiencias, exitosas o no, en distintos ámbitos que  permiten analizar y evaluar caraterísticas que ayudaron o fracasaron dentro de un sistema real} 
-se evaluarán experiencias exitosas o no en distintos ámbitos que permite analizar y evaluar características que beneficiaron o fracasaron dentro de un sistema real.\newline
-
-
-%\cambiar{cv cambiar el orden de lo de arriba}
-%\cambiar{El objetivo de la tesis es el diseño e implementación de un sistema de acta electrónica para el escrutinio descentralizado de elecciones. Con esto se pretende agilizar el recuento de votos y lograr un resultado provisorio disponible en tiempo real. Esta  herramienta permitirá cargar los datos obtenidos en cada punto de votación y luego validar su consistencia mediante la interacción de autoridades electorales. 
-
-%Se analizará además el impacto del uso de la tecnología en relación con el sistema electoral tradicional y se evaluarán experiencias exitosas o no en distintos ámbitos que permite analizar y evaluar características que beneficiaron o fracasaron dentro de un sistema real
-%}
+Se analizará además el impacto del uso de la tecnología en relación con el sistema electoral tradicional y se evaluarán experiencias exitosas o no en distintos ámbitos que permite analizar y evaluar características que beneficiaron o fracasaron dentro de un sistema real.\newline
+Del objetivo general se desprenden los siguientes objetivos especificos: 
+\begin{itemize}
+    \item Definir y diseñar el sistema de acta electrónica para el escrutinio descentralizado de elecciones.
+    \item Implementar la aplicacion diseñada.
+    \item Analizar y describir experiencias de la aplicacion con usuarios.
+\end{itemize}
 
 \section{Organización de la Tesis}
-\cambiar{Sección 1.3: Falta mencionar Capítulo 6, el cual posee conclusiones y trabajo futuro}
+%\cambiar{Sección 1.3: Falta mencionar Capítulo 6, el cual posee conclusiones y trabajo futuro - HECHO}
 A continuación se describe la estructura de esta tesis:
 %\cambiar{cv: Las referencias a numero de capítulos quedaron desfasadas. Deben ubicarse bien las etiquetas}
-\begin{enumerate}
-    \item Capítulo \ref{SistemaElectoral}: revisión conceptual sobre las características  
-    %\cambiar{cv cambiar sobre por de} 
-    de un sistema electoral tradicional.
-    \item Capítulo \ref{Elecciones}: revisión sistemática de la utilización de tecnología en  Elecciones en diferentes dominios.
-    \item Capítulo \ref{Gukena}: se describe el sistema desarrollado Gukena como opción en la utilización de las elecciones de la Universidad Nacional del Comahue.
-    \item Capítulo \ref{Gukena2}: se exponen los resultados obtenidos luego de utilizarse Gukena en las diferentes elecciones realizadas en la Universidad Nacional del Comahue entre el 2015 y 2019.
-\end{enumerate}
+\begin{itemize}
+
+    \item Capítulo \ref{SistemaElectoral} contiene una revisión conceptual sobre la factibilidad del uso de tecnología
+    en los sistemas electorales.
+    \item Capítulo \ref{Elecciones} contiene una revisión de experiencias en la utilización de tecnología en  Elecciones en diferentes dominios.
+    \item Capítulo \ref{Gukena} describe el sistema desarrollado ``Gukena'' como opción en la utilización de las elecciones de la Universidad Nacional del Comahue.
+    \item Capítulo \ref{Gukena2} expone los resultados obtenidos luego de utilizarse Gukena en las diferentes elecciones realizadas en la Universidad Nacional del Comahue entre el 2015 y 2019.
+    \item Capítulo \ref{conclusiones} contiene las conclusiones finales y trabajos futuros
+\end{itemize}
 
 \section{Metodología}
-La metodología que se utilizó para lograr los objetivos inició con un relevamiento de distintas fuentes bibliográficas estudiando y analizando características de un sistema electoral tradicional.
+La metodología utilizada para lograr los objetivos inició con un relevamiento de distintas fuentes bibliográficas estudiando y analizando características de un sistema electoral tradicional.
 %\cambiar{Además se analizaron diferentes intentos ..... HECHO}
 %\cambiar{cv cambiar Además por Luego } 
-Luego se analizaron diferentes intentos de incluir tecnología en el proceso de votación (votación electrónica) en ámbitos nacionales e internacionales. Con este conocimiento relevado y los contenidos de programación y aplicaciones enseñados y empleados en las primeras materias de programación, se analiza, diseña e implementa el software propuesto con el objetivo de satisfacer una gran parte de las propiedades deseables de un sistema electoral. Se realizaron distintos tests para verificar su funcionalidad finalizando con su inserción experimental en el sistema electoral real de la Universidad Nacional del Comahue. Esta herramienta se desarrolla con software libre y su código quedó disponible y abierta para futuras mejoras o investigaciones.
+Luego se analizaron diferentes intentos de incluir tecnología en el proceso de votación (votación electrónica) en ámbitos nacionales e internacionales. Con este conocimiento relevado y los contenidos de programación y aplicaciones enseñados y empleados en las primeras materias de programación, se analiza, diseña e implementa el software propuesto con el objetivo de satisfacer una gran parte de las propiedades deseables de un sistema electoral. Se realizaron distintas validaciones (testing) para verificar su funcionalidad finalizando con su inserción experimental en el sistema electoral real de la UNComa. Esta herramienta se desarrolla con software libre y su código quedó disponible y abierta para futuras mejoras o investigaciones.
 
-\cambiar{A su vez, la descripción del contenido de cada capítulo no refleja lo que luego posee el contenido del mismo:}
-\cambiar{Capítulo 2, no describe las características de los sistemas tradicionales; describe otros sistemas también. Ver secciones 2.1.1 y otras.}
-\cambiar{Capítulo 3, no es una revisión sistemática. Revisar concepto revisión sistemática. Ver:
-Barbara Kitchenham. Procedures for performing systematic reviews. Technical Report TR/SE-0401, Keele University, Department of Computer Science, Keele University, UK, 2004}
+%\cambiar{A su vez, la descripción del contenido de cada capítulo no refleja lo que luego posee el contenido del mismo: - HECHO}
+%\cambiar{Capítulo 2, no describe las características de los sistemas tradicionales; describe otros sistemas también. Ver secciones 2.1.1 y otras. - HECHO}
+%\cambiar{Capítulo 3, no es una revisión sistemática. Revisar concepto revisión sistemática. Ver:Barbara Kitchenham. Procedures for performing systematic reviews. Technical Report TR/SE-0401, Keele University, Department of Computer Science, Keele University, UK, 2004 - HECHO}
